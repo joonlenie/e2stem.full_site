@@ -1,0 +1,63 @@
+{% load static i18n %}<!DOCTYPE html>
+
+<html id="root" lang="en" >
+
+  <head>
+
+    <title> {% block title %} E2stem Site {% endblock title %} </title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{% block description %}{% endblock %}">
+    <meta name="author" content="E2STEM students">
+
+    <link type="image/x-icon" rel="icon" href="{% static 'img/favicon.ico' %}">
+    
+    <link type="text/css" href="{% static 'css/base.css' %}" rel="stylesheet">
+
+    <!-- <link type="text/css" href="{% static 'css/src/bootstrap.min.css' %}" rel="stylesheet"> -->
+    <!-- <link type="text/css" href="{% static 'css/src/tachyons.min.css' %}" rel="stylesheet"> -->
+    
+    <script src="{% static 'js/set-language.js' %}"></script>    
+    
+    <!-- <script src="{% static 'js/src/jquery-3.6.0.min.js' %}"></script> -->
+    <!-- <script src="{% static 'js/src/jquery-3.6.0.slim.min.js' %}"></script> --> 
+    <!-- <script src="{% static 'js/src/zepto.min.js' %}"></script> --> 
+           
+    {% block css %} {% endblock %}
+    {% block js %} {% endblock %}
+      
+  </head>
+  
+  <body>
+  
+    <header>  
+
+      <nav id="main-menu">
+     
+        <a href="{% url 'home' %}">HOME</a>
+        <a href="{% url 'about' %}">ABOUT</a>     
+       
+      </nav>
+        
+      <select id="language-menu">
+        
+        <option value="" style="color: #999;" disabled>Language / ភាសា</option>
+        <option value="en" selected>English</option>
+        <option value="kh">ខ្មែរ</option>
+
+      </select>
+      
+    </header>  
+        
+    <main> {% block main %} {% endblock %} </main>
+  
+    <footer>  
+
+      <p>This site was made for the E2STEM curriculum</p>   
+
+    </footer>
+          
+  </body>
+  
+</html>

@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %} home | e2stem.site {% endblock %}
+{% block description %} The home page of E2stem's site{% endblock %}
+
+{% block css %}
+    
+  <link href="{% static 'css/home.css' %}" rel="stylesheet">
+    
+{% endblock %}
+
+{% block js %}
+    
+  <script src="{% static 'js/change-background.js' %}"></script>    
+    
+{% endblock %}
+
+{% block main %}
+
+  <h1 class="header">Welcome</h1> 
+               
+  <!--
+   
+  <h1 class="header">
+    <span class="en">Welcome</span>  
+    <span class="kh">ជំរាបសួរ</span> 
+  </h1>
+  
+   -->
+  
+  <p>
+    <span class="en">This is a basic example of a web site.</span>  
+    <span class="kh">...Khmer...</span>  
+  </p>
+
+  <p>
+    <span class="en">It has only two pages that share most of their CSS styles. This page loads a single Javascript function which is triggered by the button below:</span>  
+    <span class="kh">...more Khmer...</span>  
+  </p>
+    
+  <button id="bg-button" type="button" onclick="changeBackground();">Change Background</button>   
+     
+{% endblock %}
+
+

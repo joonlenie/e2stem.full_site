@@ -1,0 +1,91 @@
+html {
+
+  font-size: 16px;
+  background-color: whitesmoke;
+  background-size: cover;    
+  
+}
+
+body {
+
+  margin: 0rem;
+  
+}
+
+header, main, footer {
+
+  background-color: whitesmoke;
+  margin: 1rem;  
+  padding: 1rem;
+  box-shadow: inset 0rem 0rem 0.75rem #ccc;  
+  width: max-content;
+  min-width: 50rem;
+   
+}
+
+footer {
+
+  position: absolute;  
+  bottom: 0px;
+  width: calc(100% - 4rem);
+    
+}
+
+#main-menu a {
+
+  display: inline-block;
+  width: auto;
+  margin-right: 3rem;
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: #444;
+
+}
+
+
+#main-menu a:hover {
+
+  color: slateblue;
+  
+}
+
+p {
+
+  width: 40rem;
+  line-height: 2rem;
+
+}
+
+button {
+
+  margin: 1rem 0rem 1rem 0rem;
+  padding: 1rem;
+  border: 2px solid yellowgreen;
+  border-radius: 0px;
+  height: 4rem;
+  
+}
+
+button:hover {
+
+  background-color: yellowgreen;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+    
+}
+
+select {
+
+  padding: 1rem;
+  position: absolute;  
+  top: 1rem;
+  right: 1rem;
+  border: 2px solid slateblue;  
+  /* border: none;    
+  box-shadow: inset 0rem 0rem 0.75rem #ccc; */    
+  border-radius: 0px;  
+  appearance: none;
+ 
+}
+

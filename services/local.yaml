@@ -1,0 +1,27 @@
+version: '3'
+
+volumes:
+  local_postgres_data: {}
+  local_postgres_data_backups: {}
+
+services:
+  app: &app
+    build:
+      context: app/.
+      dockerfile: app/Dockerfile
+    image: e2stem_app
+    container_name: e2stem_app
+    depends_on:
+      - database
+    volumes:
+      - .:/e2stem.site
+    env_file:
+      - ./env/.app
+    ports:
+      - "8000:8000"
+    command: /start
+
+
+
+
+

@@ -15,22 +15,17 @@ RUN apt-get update \
   && rm -rf /var/lib/apt/lists/*
 
 # Requirements are installed here to ensure they will be cached.
-COPY ./requirements /requirements
+COPY ./app/settings/requirements.txt /
+RUN ls -al 
 RUN pip install -r /requirements.txt
 
-COPY ./compose/production/django/entrypoint /entrypoint
-RUN sed -i 's/\r$//g' /entrypoint
-RUN chmod +x /entrypoint
-
-COPY ./compose/local/django/start /start
+COPY ./app/start /start
 RUN sed -i 's/\r$//g' /start
 RUN chmod +x /start
 
-
+#COPY . /e2stem.site
 
 WORKDIR /e2stem.site
 
-ENTRYPOINT ["/entrypoint"]
+#ENTRYPOINT ["/entrypoint"]
 
-
-RUN pip install 

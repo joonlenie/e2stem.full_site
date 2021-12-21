@@ -1,5 +1,7 @@
 html {
 
+  height: 100%;
+  margin: 0rem;
   font-size: 16px;
   background-color: whitesmoke;
   background-size: cover;    
@@ -8,11 +10,12 @@ html {
 
 body {
 
+  height: 100%;
   margin: 0rem;
   
 }
 
-header, main, footer {
+footer {
 
   background-color: whitesmoke;
   margin: 1rem;  
@@ -23,12 +26,24 @@ header, main, footer {
    
 }
 
-footer {
+main {
 
-  position: absolute;  
-  bottom: 0px;
-  width: calc(100% - 4rem);
-    
+  background-color: whitesmoke;
+  margin: 1rem;  
+  padding: 1rem;
+  box-shadow: inset 0rem 0rem 0.75rem #ccc;  
+  min-width: 50rem;
+  
+}
+
+header {
+
+  background-color: whitesmoke;
+  margin: 1rem;  
+  padding: 1rem;
+  box-shadow: inset 0rem 0rem 0.75rem #ccc;  
+  width: calc(100% - 12.5rem);
+  
 }
 
 #main-menu a {
@@ -56,7 +71,52 @@ p {
 
 }
 
-button {
+
+#language-menu {
+
+  position: absolute;  
+  top: 1rem;
+  right: 1rem;
+  border: 2px solid slateblue;  
+  border-radius: 0px;  
+  appearance: none;
+  height: 4rem; 
+  text-align: center;
+}
+
+
+label {
+
+  display: inline-block;
+  padding: 1rem 0rem 1rem 0rem;
+
+}
+
+/* For a sticky footer */
+
+main {
+ 
+  min-height: 100%;
+  margin-bottom: 2rem;
+  
+}
+
+footer {
+
+  width: calc(100% - 4rem);
+    
+}
+
+
+footer,
+.push {
+  height: 5rem;
+}
+
+
+/* Style classes */
+
+.green-button  {
 
   margin: 1rem 0rem 1rem 0rem;
   padding: 1rem;
@@ -66,7 +126,7 @@ button {
   
 }
 
-button:hover {
+.green-button:hover {
 
   background-color: yellowgreen;
   color: white;
@@ -75,17 +135,4 @@ button:hover {
     
 }
 
-select {
-
-  padding: 1rem;
-  position: absolute;  
-  top: 1rem;
-  right: 1rem;
-  border: 2px solid slateblue;  
-  /* border: none;    
-  box-shadow: inset 0rem 0rem 0.75rem #ccc; */    
-  border-radius: 0px;  
-  appearance: none;
- 
-}
 

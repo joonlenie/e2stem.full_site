@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %} survey | e2stem.site {% endblock %}
+{% block description %}  {% endblock %}
+
+{% block css %}
+
+  <link type="text/css" href="{% static 'css/survey.css' %}" rel="stylesheet">    
+    
+{% endblock %}
+
+{% block js %} {% endblock %}
+
+{% block main %}          
+
+  <section>  
+
+    <h1>Survey</h1>
+  
+    <form id="survey-form" action="/survey/" method="post">
+  
+      {% csrf_token %} 
+
+      <fieldset>
+
+        <h4>Student Information:</h4>
+      
+        <input type="text" name="name" placeholder="name">
+      
+        <input type="number" name="grade" placeholder="grade">
+        <input type="number" name="age" placeholder="age">
+
+        <br>
+      
+        <select id="teacher-select" name="teacher">
+        
+          <option value="" style="color: #999;" disabled selected>Select Teacher</option>
+          <option value="A">Mr. A</option>
+          <option value="B">Mrs. B</option>
+
+        </select>
+      
+      </fieldset>
+
+      <fieldset>
+
+        <h4>Questions:</h4>
+           
+        <label for="q-1">What is your favorite subject and why?</label>
+        <textarea name="q-1" placeholder="..."></textarea>
+
+        <label for="q-2">How long have you studied this subject?</label> 
+        <textarea name="q-2" placeholder="..."></textarea>    
+      
+      </fieldset>
+
+      <input class="green-button" id="submit-button" type="submit" value="SUBMIT">
+
+    </form>   
+
+  </section>    
+
+{% endblock %}
+
+

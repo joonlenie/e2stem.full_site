@@ -37,7 +37,8 @@
      
         <a href="{% url 'home' %}">HOME</a>
         <a href="{% url 'about' %}">ABOUT</a>     
-       
+        <a href="{% url 'survey' %}">SURVEY</a>     
+               
       </nav>
         
       <select id="language-menu">
@@ -50,7 +51,13 @@
       
     </header>  
         
-    <main> {% block main %} {% endblock %} </main>
+    <main> 
+    
+      {% block main %} {% endblock %}
+      
+      <div class="push"></div>
+      
+    </main>
   
     <footer>  
 

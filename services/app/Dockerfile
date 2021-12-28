@@ -8,24 +8,27 @@ RUN apt-get update \
   && apt-get install -y build-essential \
   # psycopg2 dependencies
   && apt-get install -y libpq-dev \
-  # Translations dependencies
+  # translations dependencies
   && apt-get install -y gettext \
   # cleaning up unused files
   && apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false \
   && rm -rf /var/lib/apt/lists/*
 
-# Requirements are installed here to ensure they will be cached.
+# requirements are installed here to ensure they will be cached
+
 COPY ./app/settings/requirements.txt /
 RUN ls -al 
 RUN pip install -r /requirements.txt
+
+# copy the start script to the container
 
 COPY ./app/start /start
 RUN sed -i 's/\r$//g' /start
 RUN chmod +x /start
 
-#COPY . /e2stem.site
+# copy the rest of the files 
 
-WORKDIR /e2stem.site
+COPY . /e2stem.site
 
-#ENTRYPOINT ["/entrypoint"]
+
 

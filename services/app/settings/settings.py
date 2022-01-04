@@ -94,7 +94,7 @@ DATABASES = {
 }
 
 
-# Password validation
+# Password validationWe can postpone the meeting since I also informed you a bit late. I am sorry.
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
 
 AUTH_PASSWORD_VALIDATORS = [

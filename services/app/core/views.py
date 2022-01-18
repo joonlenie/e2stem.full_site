@@ -1,11 +1,47 @@
 from django.shortcuts import render
 
-from database.models import Student
+from database.models import Student                
 
-# Create your views here.
-
-
+import os
         
+import markdown
+from markdown.extensions import attr_list
+      
+  
+def blog(request):
+
+    markdown_dir = 'templates/blog'
+
+    articles = []
+
+    for directory in os.listdir(markdown_dir):
+
+        en_markdown_path = "{}/{}/en.md".format(markdown_dir, directory)
+        kh_markdown_path = "{}/{}/kh.md".format(markdown_dir, directory)
+
+        en_markdown = open(en_markdown_path, 'r').read()
+        kh_markdown = open(kh_markdown_path, 'r').read()
+
+        en_html = markdown.markdown(en_markdown, extensions=['attr_list'])
+        kh_html = markdown.markdown(kh_markdown, extensions=['attr_list'])
+
+        article = {
+
+          'en': en_html,
+          'kh': kh_html
+
+        }
+
+        articles.append(article)
+                    
+    context = {
+
+        'articles': articles
+
+    }
+
+    return render(request, 'blog.html', context)
+
         
 def survey(request):
 
@@ -55,6 +91,4 @@ def survey(request):
 
         return render(request, 'survey.html', context)
 
-        
-        
         

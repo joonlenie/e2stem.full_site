@@ -64,9 +64,19 @@ header {
   
 }
 
+h1 {
+
+  border: 2px dashed #444;
+  padding: 1rem;
+  background: white;
+  width: max-content;
+  min-width:20rem;
+
+}
+
 p {
 
-  width: 40rem;
+  max-width: 50rem;
   line-height: 2rem;
 
 }
@@ -118,6 +128,7 @@ footer,
 
 .green-button  {
 
+  background-color: white;
   margin: 1rem 0rem 1rem 0rem;
   padding: 1rem;
   border: 2px solid yellowgreen;

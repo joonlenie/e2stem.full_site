@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %} blog | e2stem.site {% endblock %}
+{% block description %} Get updates on our project {% endblock %}
+
+{% block css %}
+    
+  <link href="{% static 'css/blog.css' %}" rel="stylesheet">
+    
+{% endblock %}
+
+{% block js %} {% endblock %}
+
+{% block main %} 
+   
+  <section id="blog">  
+
+    <h1>Blog</h1>
+  
+    {% for article in articles %}    
+
+    <article class="en">
+   
+      {{ article.en | safe }}
+
+    </article>
+
+    <article class="kh">
+   
+      {{ article.kh | safe }}
+
+    </article>
+
+    {% endfor %} 
+
+  </section>  
+
+{% endblock %}
+
+

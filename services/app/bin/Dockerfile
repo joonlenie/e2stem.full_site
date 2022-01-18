@@ -17,12 +17,13 @@ RUN apt-get update \
 # requirements are installed here to ensure they will be cached
 
 COPY ./app/settings/requirements.txt /
-RUN ls -al 
+
 RUN pip install -r /requirements.txt
 
 # copy the start script to the container
 
-COPY ./app/start /start
+COPY ./app/bin/start /start
+
 RUN sed -i 's/\r$//g' /start
 RUN chmod +x /start
 

@@ -1,18 +1,22 @@
 version: '3'
 
 services:
+
   app: &app
+
     build:
       context: .
-      dockerfile: app/Dockerfile
+      dockerfile: app/bin/Dockerfile
+
     image: e2stem_app
     container_name: e2stem_app
+
     volumes:
-      - .:/e2stem.site
-    env_file:
-      - ./app/env/.e2stem_app      
+      - .:/e2stem.site   
+
     ports:
       - "8000:8000"
+
     command: /start
 
 

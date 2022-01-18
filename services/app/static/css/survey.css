@@ -5,15 +5,17 @@ nav a:nth-child(3) {
 }
 
 section {
+
   width: 40rem;
+
 }
 
 
-h4 {
+h2 {
 
-  background: #bbb;
+
   color: #2f2f2f;
-  padding: 1rem;
+
   
 }
 

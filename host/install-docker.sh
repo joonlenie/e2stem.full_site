@@ -4,13 +4,13 @@
 
 sudo apt-get update && sudo apt-get upgrade
 
-# Install Docker and add 
+# Install Docker and add the 
 
 curl -sSL https://get.docker.com | sh
 
-sudo usermod -aG docker e2stem_docker
+sudo usermod -aG docker Pi
 
-groups e2stem_docker
+groups Pi
 
 # And reboot
 

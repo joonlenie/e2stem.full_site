@@ -1,9 +1,20 @@
+:root {
+
+  --light-orange: #ffe3bc;
+  --lavender: #cbb5ff;
+  --teal: #cdf6f5;
+  --pink: #ffc5de;
+  --gray: #f2f2f2;
+  --white: #ffffff;
+
+}
+
 html {
 
   height: 100%;
   margin: 0rem;
   font-size: 16px;
-  background-color: whitesmoke;
+  background-color: var(--light-orange);
   background-size: cover;    
   
 }
@@ -28,7 +39,7 @@ footer {
 
 main {
 
-  background-color: whitesmoke;
+  background-color: var(--lavender);
   margin: 1rem;  
   padding: 1rem;
   box-shadow: inset 0rem 0rem 0.75rem #ccc;  

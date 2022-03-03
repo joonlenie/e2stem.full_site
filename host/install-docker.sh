@@ -12,7 +12,7 @@ sudo usermod -aG docker Pi
 
 groups Pi
 
-# And reboot...
+# And reboot.
 
 
 

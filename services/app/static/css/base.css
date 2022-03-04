@@ -28,27 +28,6 @@ body {
   
 }
 
-footer {
-
-  background-color: whitesmoke;
-  margin: 1rem;  
-  padding: 1rem;
-  box-shadow: inset 0rem 0rem 0.75rem #ccc;  
-  width: max-content;
-  min-width: 50rem;
-   
-}
-
-main {
-
-  background-color: var(--lavender);
-  margin: 0rem;  
-  padding: 0rem;
-  box-shadow: inset 0rem 0rem 0.75rem #ccc;  
-  min-width: 50rem;
-  
-}
-
 header {
 
   background-color: whitesmoke;
@@ -58,6 +37,7 @@ header {
   width: calc(100% - 12.5rem);
   
 }
+
 
 #main-menu a {
 
@@ -76,6 +56,38 @@ header {
   color: slateblue;
   
 }
+
+
+main {
+
+  background-color: var(--lavender);
+  margin: 0rem;  
+  padding: 0rem;
+  box-shadow: inset 0rem 0rem 0.75rem #ccc;  
+  min-width: 50rem;
+  
+}
+
+section {
+
+  height:40rem;
+  padding: 1rem;
+
+}
+
+
+footer {
+
+  background-color: whitesmoke;
+  margin: 1rem;  
+  padding: 1rem;
+  box-shadow: inset 0rem 0rem 0.75rem #ccc;  
+  width: max-content;
+  min-width: 50rem;
+   
+}
+
+
 
 h1 {
 

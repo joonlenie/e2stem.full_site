@@ -34,16 +34,19 @@ footer {
   box-shadow: inset 0rem 0rem 0.75rem #ccc;  
   width: max-content;
   min-width: 50rem;
-   
+  width: calc(100% - 4rem);
+  height: 5rem;     
+  
 }
 
 main {
-
 
   margin: 0rem;  
   padding: 0rem;
   box-shadow: inset 0rem 0rem 0.75rem #ccc;  
   min-width: 50rem;
+  min-height: 100%;
+  margin-bottom: 2rem;
   
 }
 
@@ -124,21 +127,14 @@ label {
 
 main {
  
-  min-height: 100%;
-  margin-bottom: 2rem;
-  
+
 }
 
-footer {
-
-  width: calc(100% - 4rem);
-    
-}
 
 
 footer,
 .push {
-  height: 5rem;
+
 }
 
 

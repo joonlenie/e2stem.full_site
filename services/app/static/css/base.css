@@ -14,9 +14,8 @@
 html {
 
   height: 100%;
-  margin: 0rem;
+  margin: 0;
   font-size: 16px;
-
   background-size: cover;    
   
 }
@@ -24,8 +23,18 @@ html {
 body {
 
   height: 100%;
-  margin: 0rem;
-  
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+}
+
+main {
+
+  flex: 1;
+
 }
 
 header {
@@ -70,7 +79,6 @@ main {
 section {
 
   height:40rem;
-
   padding: 1rem;
 
 }
@@ -84,7 +92,7 @@ footer {
   box-shadow: inset 0rem 0rem 0.75rem #ccc;  
   width: max-content;
   min-width: 50rem;
-   
+  display:none; 
 }
 
 
@@ -139,7 +147,7 @@ main {
 footer {
 
   width: calc(100% - 4rem);
-    
+  display:none;   
 }
 
 

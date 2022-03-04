@@ -9,3 +9,26 @@ img {
   width: 40rem;
 
 }
+
+section {
+  height:40rem;
+  margin: 0rem;
+  padding: 0rem;
+}
+
+#section-1 {
+  background-color: var(--light-orange);
+
+}
+
+#section-2 {
+
+  background-color: var(--lavender);
+
+}
+
+#section-3 {
+
+  background-color: var(--light-orange);
+
+}

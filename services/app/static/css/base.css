@@ -16,7 +16,7 @@ html {
   height: 100%;
   margin: 0rem;
   font-size: 16px;
-  background-color: var(--light-orange);
+
   background-size: cover;    
   
 }
@@ -60,7 +60,6 @@ header {
 
 main {
 
-  background-color: var(--lavender);
   margin: 0rem;  
   padding: 0rem;
   box-shadow: inset 0rem 0rem 0.75rem #ccc;  
@@ -71,6 +70,7 @@ main {
 section {
 
   height:40rem;
+
   padding: 1rem;
 
 }

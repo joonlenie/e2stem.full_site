@@ -10,11 +10,6 @@ img {
 
 }
 
-section {
-  height:40rem;
-  margin: 0rem;
-  padding: 0rem;
-}
 
 #section-1 {
   background-color: var(--light-orange);

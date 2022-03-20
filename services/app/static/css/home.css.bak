@@ -1,0 +1,29 @@
+nav a:nth-child(1) {
+
+  border-bottom: 1px solid #444;
+
+}
+
+img {
+
+  width: 40rem;
+
+}
+
+
+#home-1 {
+  background-color: var(--light-orange);
+
+}
+
+#home-2 {
+
+  background-color: var(--lavender);
+
+}
+
+#home-3 {
+
+  background-color: var(--light-orange);
+
+}

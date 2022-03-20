@@ -1,21 +1,21 @@
 :root {
-
-  --light-orange: #ffe3bc;
-  --lavender: #cbb5ff;
+  --lightorange: #ffe3bc;
+  --black: #1a1a1a;
+  --lightpurple: #cbb5ff;
   --teal: #cdf6f5;
   --pink: #ffc5de;
   --gray: #f2f2f2;
   --white: #ffffff;
-
 }
+
 
 html {
 
   height: 100%;
   margin: 0rem;
   font-size: 16px;
-  background-color: whitesmoke;
-  background-size: cover;    
+
+
   
 }
 
@@ -23,141 +23,118 @@ body {
 
   height: 100%;
   margin: 0rem;
-  
+  background-color: var(--lightorange);  
 }
+
+
+main {
+
+  min-height:100vh;
+
+}
+
+#head {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 15px;
+}
+#overallogo {
+  position: relative;
+  overflow: hidden;
+  float: left;
+  height: 50px;
+
+}
+#lang {
+  position: absolute;
+  right: 16px;
+  margin-top: 5px;
+}
+#navbarcontainer {
+  position: absolute;
+  right: 30px;
+  margin: 30px;
+  width: auto;
+  padding-bottom: 20px;
+}
+.navbar a {
+  display: inline-block;
+  overflow: hidden;
+  color: #FFE3BC;
+  padding: 15px 19px;
+  margin: 2px 2px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 18px;
+  background-color: #1A1A1A;
+  border: 2px solid #1A1A1A;
+  border-radius: 15px;
+  cursor: pointer;
+}
+.navbar a:hover {
+  background-color: #d4f1f0;
+  text-align: center;
+  color: #1A1A1A;
+}
+
 
 footer {
-
-  background-color: whitesmoke;
-  margin: 1rem;  
-  padding: 1rem;
-  box-shadow: inset 0rem 0rem 0.75rem #ccc;  
-  width: max-content;
-  min-width: 50rem;
-  width: calc(100% - 4rem);
-  height: 5rem;     
-  
-}
-
-main {
-
-  margin: 0rem;  
-  padding: 0rem;
-  box-shadow: inset 0rem 0rem 0.75rem #ccc;  
-  min-width: 50rem;
-  min-height: 100%;
-  margin-bottom: 2rem;
-  
-}
-
-section {
-
-  padding: 1rem;
-  min-height:40rem;
-
-}
-
-header {
-
-  background-color: var(--white);
-  margin: 1rem;  
-  padding: 1rem;
-  box-shadow: inset 0rem 0rem 0.75rem #ccc;  
-  width: calc(100% - 12.5rem);
-  
-}
-
-#main-menu a {
-
-  display: inline-block;
+  background-color: var(--lightpurple);
+  height: 250px;
   width: auto;
-  margin-right: 3rem;
-  text-decoration: none;
-  font-size: 1.5rem;
-  color: #444;
-
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-
-
-#main-menu a:hover {
-
-  color: slateblue;
-  
+.section4 div {
+  padding-left: 40px;
+  padding-right: 40px;
 }
-
-h1 {
-
-  border: 2px dashed #444;
-  padding: 1rem;
-  background: white;
-  width: max-content;
-  min-width:20rem;
-
+.section4-left-column {
+  position: relative;
+  bottom: 13px;
 }
-
-p {
-
-  max-width: 50rem;
-  line-height: 2rem;
-
-}
-
-
-#language-menu {
-
-  position: absolute;  
-  top: 1rem;
-  right: 1rem;
-  border: 2px solid slateblue;  
-  border-radius: 0px;  
-  appearance: none;
-  height: 4rem; 
-  text-align: center;
-}
-
-
-label {
-
-  display: inline-block;
-  padding: 1rem 0rem 1rem 0rem;
-
-}
-
-/* For a sticky footer */
-
-main {
- 
-
-}
-
-
-
-footer,
-.push {
-
-}
-
-
-/* Style classes */
-
-.green-button  {
-
-  background-color: white;
-  margin: 1rem 0rem 1rem 0rem;
-  padding: 1rem;
-  border: 2px solid yellowgreen;
-  border-radius: 0px;
-  height: 4rem;
-  
-}
-
-.green-button:hover {
-
-  background-color: yellowgreen;
-  color: white;
-  cursor: pointer;
+.section4-left p {
+  font-family: verdana;
+  font-size: 18px;
+  color: var(--black);
   font-weight: bold;
-    
+  position: relative;
+  bottom: 14px;
 }
+.section4-right {
+  text-align: right;
+}
+.section4-right p {
+  font-family: verdana;
+  font-weight: bold;
+  font-size: 15px;
+  color: var(--black);
+  line-weight: 0.5;
+}
+.section4-right button {
+  font-family: verdana;
+  font-size: 20px;
+  color: var(--lightpurple);
+  background-color: var(--black);
+  padding: 10px;
+  border: 2px solid var(--black);
+  border-radius: 15px;
+  cursor: pointer;
+}
+.section5 {
+  background-color: var(--black);
+  height: 45px;
+  width: auto;
+}
+.section5 p {
+  font-size: 20px;
+  font-family: sans-serif;
+  color: var(--lightpurple);
+  text-align: center;
+  position: relative;
+  top: 10px;
+}
+
 
 

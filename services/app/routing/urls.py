@@ -28,6 +28,8 @@ urlpatterns = [
     path('', TemplateView.as_view(template_name='home.html'), name="home"),    
     path('about/', TemplateView.as_view(template_name='about.html'), name="about"),        
     path('blog/', views.blog, name="blog"),         
-    path('survey/', views.survey, name="survey")         
+    path('survey/', views.survey, name="survey"),         
+    path('menstruation/', TemplateView.as_view(template_name='menstruation.html'), name="menstruation"),        
+    path('sharing/', TemplateView.as_view(template_name='sharing.html'), name="sharing"),        
     
 ]

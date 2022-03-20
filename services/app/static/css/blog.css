@@ -10,11 +10,18 @@ article {
   padding: 1rem 2rem 1rem 1rem;
   margin-bottom: 1rem;
   background: white;
-  width: max-content;
+  max-width: 60rem;
+  width: calc(100% - 0rem);
 
 }
 
-img {
+main {
+
+  padding:1rem;
+
+}
+
+main img {
 
   display: block;
   width: 40rem;

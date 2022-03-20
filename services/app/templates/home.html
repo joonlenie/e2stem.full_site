@@ -43,7 +43,6 @@
  
 </section> 
 
--->   
  
 <section id="home-1">  
 
@@ -60,6 +59,82 @@
   <p>Hi there!</p>
 
 </section> 
+
+-->   
+
+
+
+
+  <div id="slideshow" class="carousel slide" data-bs-ride="carousel">
+
+    <div class="carousel-indicators">
+
+      <button type="button" data-bs-target="#1" data-bs-slide-to="0" class="active"></button>
+      <button type="button" data-bs-target="#1" data-bs-slide-to="1"></button>
+      <button type="button" data-bs-target="#1" data-bs-slide-to="2"></button>
+
+    </div>
+
+    <div class="carousel-inner">
+
+        <div class="carousel-item active">
+            <img src="{% static 'img/slide-1.png' %}" alt="slide1" class="d-block w-100" width="90%" height="500px">
+        </div>
+
+        <div class="carousel-item">
+            <img src="{% static 'img/slide-2.png' %}" alt="slide2" class="d-block w-100" width="90%" height="500px">
+        </div>
+
+        <div class="carousel-item">
+           <img src="{% static 'img/slide-3.png' %}" alt="slide3" class="d-block w-100" width="90%" height="500px">
+        </div>
+
+    </div>
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#slideshow" data-bs-slide="prev">
+
+      <span class="carousel-control-prev-icon"></span>
+
+    </button>
+
+    <button class="carousel-control-next" type="button" data-bs-target="#slideshow" data-bs-slide="next">
+
+      <span class="carousel-control-next-icon"></span>
+
+    </button>
+
+  </div>
+
+
+  <section class="section2">
+  
+    <img src="{% static 'img/middle-text-graphic.png' %}" alt="Textual Graphic"></img>
+    <button type="button">Click here to view the lesson</button>
+
+  </section>
+
+  <section class="section3">
+   
+    <div>
+
+      <p>We want to give the opportunities to student or teenager to be able to experience charity work, <br> interning, and creating positive influences in society. <br>We believe in teamwork, motivation with us altogether.
+      </p>
+      <br/>
+
+    </div>
+
+    <div class="kk">
+
+      <button class="cn"> 
+        <a href="#">Explore who we are </a>
+      </button>
+
+    </div>
+
+  </section>
+
+
+
 
 {% endblock %}
 

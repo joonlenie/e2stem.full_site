@@ -22,6 +22,7 @@ Then run the project with `docker-compose`:
 Or install the Python dependencies manually and run the development server:
 
 `pip3 install -r app/core/requirements.txt`
+
 `python3 app/manage.py runserver`
 
 

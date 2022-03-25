@@ -10,7 +10,7 @@ from markdown.extensions import attr_list
   
 def blog(request):
 
-    markdown_dir = 'templates/blog'
+    markdown_dir = 'blog'
 
     articles = []
 

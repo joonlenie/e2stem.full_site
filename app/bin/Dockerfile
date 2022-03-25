@@ -16,7 +16,7 @@ RUN apt-get update \
 
 # requirements are installed here to ensure they will be cached
 
-COPY ./app/settings/requirements.txt /
+COPY ./app/core/requirements.txt /
 
 RUN pip install -r /requirements.txt
 

@@ -8,8 +8,8 @@ services:
       context: .
       dockerfile: app/bin/Dockerfile
 
-    image: e2stem_app
-    container_name: e2stem_app
+    image: e2stem_site
+    container_name: e2stem_site
 
     volumes:
       - .:/e2stem.site   

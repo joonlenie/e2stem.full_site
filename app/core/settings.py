@@ -93,6 +93,7 @@ DATABASES = {
     }
 }
 
+DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 
 # Password validationWe can postpone the meeting since I also informed you a bit late. I am sorry.
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
@@ -137,3 +138,5 @@ STATIC_URL = '/static/'
 # https://django-extensions.readthedocs.io/en/latest/installation_instructions.html#configuration
 
 INSTALLED_APPS += ["django_extensions"]  
+
+

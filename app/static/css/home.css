@@ -1,16 +1,17 @@
 
 #slideshow{
-  margin-top: 0px;
-  width:90%;
-  padding-left: 120px;
+
 
 }
 
 .carousel-inner {
+  width:90%;
   max-width:800px;
+  margin: 0 auto;
 }
 
-.carousel-control-prev-icon {
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
   color: red;
   width: 70px;
   height: 70px;

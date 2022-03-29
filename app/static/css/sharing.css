@@ -1,0 +1,60 @@
+body {
+  background-color: var(--lightpurple);
+}
+
+#sharing-board {
+  margin: 0 auto;
+  width: 100%;
+}
+
+#articles {
+
+}
+
+#article-wrapper {
+
+
+}
+
+
+#articles h3 {
+
+  width:100%;
+  text-align:center;
+  font-size:28px;
+
+}
+
+.card {
+  width:38%;
+  display:inline-block;
+  margin:3%;
+  background-color: var(--lightorange); 
+  padding:30px;
+}
+
+.card .title {
+
+}
+
+
+.card img {
+  width:100%;
+} 
+
+
+.card .author {
+
+}
+
+.card .date {
+
+}
+
+.card .time {
+
+}
+
+.card .description {
+
+}

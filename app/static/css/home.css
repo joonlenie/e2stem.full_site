@@ -6,6 +6,10 @@
 
 }
 
+.carousel-inner {
+  max-width:800px;
+}
+
 .carousel-control-prev-icon {
   color: red;
   width: 70px;
@@ -55,15 +59,13 @@
 .section3 button {
   justify-self: center;
 }*/
-.section3 .cn {
+.section3 a {
   background: var(--lightpurple);
   color: #1A1A1A;
   border: 2px solid var(--lightpurple);
   border-radius: 15px;
   padding: 8px;
   cursor: pointer;
-}
-.section3 .cn a {
 
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   color: #1A1A1A;

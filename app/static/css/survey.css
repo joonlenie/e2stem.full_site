@@ -7,6 +7,7 @@ nav a:nth-child(3) {
 section {
 
   width: 40rem;
+  padding:30px;
 
 }
 
@@ -21,7 +22,7 @@ h2 {
 
 form {
 
-  width: 60rem;
+  min-width: 40rem;
   
 }
 

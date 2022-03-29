@@ -14,9 +14,6 @@ html {
   height: 100%;
   margin: 0rem;
   font-size: 16px;
-
-
-  
 }
 
 body {
@@ -24,8 +21,8 @@ body {
   height: 100%;
   margin: 0rem;
   background-color: var(--lightorange);  
-}
 
+}
 
 main {
 
@@ -33,31 +30,51 @@ main {
 
 }
 
-#head {
+header {
+
   display: flex;
   justify-content: space-between;
-  padding-bottom: 15px;
+  padding:30px;
 }
+
+a {
+  text-decoration:none;
+  color: var(--lightpurple);
+}
+
 #overallogo {
+
   position: relative;
   overflow: hidden;
   float: left;
   height: 50px;
 
 }
+
+
+#graphic-logo {
+  width:95px;
+
+}
+
+#text-logo {
+
+  width:255px;
+  margin-top:10px;
+}
+
 #lang {
   position: absolute;
   right: 16px;
-  margin-top: 5px;
+  margin-top: -20px;
 }
-#navbarcontainer {
-  position: absolute;
-  right: 30px;
-  margin: 30px;
-  width: auto;
-  padding-bottom: 20px;
+
+
+nav {
+  padding:20px;
 }
-.navbar a {
+
+nav a {
   display: inline-block;
   overflow: hidden;
   color: #FFE3BC;
@@ -71,30 +88,38 @@ main {
   border-radius: 15px;
   cursor: pointer;
 }
-.navbar a:hover {
+
+nav a:hover {
   background-color: #d4f1f0;
   text-align: center;
   color: #1A1A1A;
 }
 
+button {
+  background:none;
+  border:none;
+}
+
 
 footer {
   background-color: var(--lightpurple);
-  height: 250px;
+
   width: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.section4 div {
-  padding-left: 40px;
-  padding-right: 40px;
+
+footer > div {
+  padding: 40px;
 }
-.section4-left-column {
+
+.footer-left-column {
   position: relative;
   bottom: 13px;
 }
-.section4-left p {
+
+.footer-left p {
   font-family: verdana;
   font-size: 18px;
   color: var(--black);
@@ -102,17 +127,21 @@ footer {
   position: relative;
   bottom: 14px;
 }
-.section4-right {
+
+.footer-right {
   text-align: right;
 }
-.section4-right p {
+
+.footer-right p {
   font-family: verdana;
   font-weight: bold;
   font-size: 15px;
   color: var(--black);
   line-weight: 0.5;
 }
-.section4-right button {
+
+.footer-right span {
+
   font-family: verdana;
   font-size: 20px;
   color: var(--lightpurple);
@@ -121,19 +150,25 @@ footer {
   border: 2px solid var(--black);
   border-radius: 15px;
   cursor: pointer;
+
 }
-.section5 {
+
+#copyright {
+
   background-color: var(--black);
-  height: 45px;
-  width: auto;
+
+  width: 100%;
+  padding:10px;
 }
-.section5 p {
+
+#copyright p {
+
   font-size: 20px;
   font-family: sans-serif;
   color: var(--lightpurple);
   text-align: center;
-  position: relative;
-  top: 10px;
+
+
 }
 
 

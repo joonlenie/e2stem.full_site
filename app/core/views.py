@@ -8,7 +8,7 @@ import markdown
 from markdown.extensions import attr_list
       
   
-def blog(request):
+def blog(request, language):
 
     markdown_dir = 'blog'
 
@@ -40,10 +40,12 @@ def blog(request):
 
     }
 
+    print(language)
+
     return render(request, 'blog.html', context)
 
         
-def survey(request):
+def survey(request, language):
 
     if request.method == 'GET':
     
@@ -58,6 +60,7 @@ def survey(request):
         }
 
         return render(request, 'survey.html', context)
+
   
     if request.method == 'POST':
     

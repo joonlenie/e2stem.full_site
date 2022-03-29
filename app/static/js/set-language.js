@@ -1,9 +1,19 @@
 // A function that reads the selected language from the option menu
 // and loops over the paragraphs to hide / show the matching language
 
-function setLanguage() {
+function setLanguage(language) {
 
-  let userLanguage = document.getElementById('language-menu').value;
+  let userLanguage = null
+
+  if(language) {
+
+    userLanguage = language
+
+  } else {
+
+    userLanguage = window.location.pathname.replace(/\/$/, '').split("/").pop()
+
+  }
 
   let allTranslations = document.querySelectorAll('.en, .kh'); 
   
@@ -27,15 +37,23 @@ function setLanguage() {
 
 // On page load run the setLanguage function
 
-document.addEventListener('DOMContentLoaded', setLanguage);
+document.addEventListener('DOMContentLoaded', function() {
+
+ setLanguage(null)
+    
+});
 
 // And any time the select element changes
 
 document.addEventListener('DOMContentLoaded', function() {
 
-  let select = document.getElementById('language-menu');
-  
-  select.addEventListener('change', setLanguage);  
+  $("button").click(function() {
+
+    var language = $(this).val();
+
+    setLanguage(language)
+
+  });
     
 });
 

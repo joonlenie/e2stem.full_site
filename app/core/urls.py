@@ -23,7 +23,7 @@ from core import views
 
 urlpatterns = [
 
-    path('admin/<str:language>/', admin.site.urls),
+    path('admin/', admin.site.urls),
     
     path('<str:language>/', TemplateView.as_view(template_name='home.html'), name="home"),    
     path('about/<str:language>/', TemplateView.as_view(template_name='about.html'), name="about"),        

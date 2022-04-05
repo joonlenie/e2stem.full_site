@@ -1,3 +1,5 @@
+from datetime import datetime
+
 from django.db import models
 
 # Student model
@@ -11,7 +13,7 @@ class Student(models.Model):
         
     responses = models.TextField(null=False)  
     
-    created_at = models.DateField(auto_now_add=True)
+    created_at = models.DateField(default=datetime.now)
     last_modified = models.DateField(auto_now=True)
     
     def __str__(self):
@@ -26,16 +28,20 @@ class Student(models.Model):
 
 class BlogPost(models.Model):
 
-    title = models.CharField(max_length=200)
-    author = models.CharField(max_length=100)
-    text = models.TextField()    
-    
-    created_at = models.DateField(auto_now_add=True)
+    title_en = models.CharField(max_length=500)
+    title_kh = models.CharField(max_length=500)
+
+    text_en = models.TextField()  
+    text_kh = models.TextField()    
+
+    image = models.CharField(max_length=100)    
+    author = models.CharField(max_length=100)  
+    created_at = models.DateField(default=datetime.now)
     last_modified = models.DateField(auto_now=True)
     
     def __str__(self):
 
-        return self.name
+        return self.title_en
 
     class Meta:
 

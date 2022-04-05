@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block title %} test  {% endblock %}
+{% block title %} Sharing  {% endblock %}
 {% block description %} ... {% endblock %}
 
 {% block css %}
@@ -17,9 +17,11 @@
 <section id="sharing-information">     
 
   <img id="sharing-board" src="{% static 'img/sharing-board.png' %}" alt="Textual Graphic"></img>
+
   <!--
   <video id="sharing-board" src="{% static 'img/sharing-board.png' %}" alt="Textual Graphic"></video>
   -->
+
 </section>   
 
 <section id="articles">  
@@ -29,54 +31,39 @@
 
   <div id="article-wrapper">
 
-    <div class="card">
-      <img src="{% static 'img/article-image-1.png' %}" alt=""></img>
-      <span class="author"> Chhorn Sopheara | ឆន សុភារ៉ា </span>
-      <span class="date"> 28.02.2022 </span>
-      <span class="time"> 1 min ago</span>
-      <p class="title">តើអ្នកធ្លាប់ដូចខ្ញុំដែរឬទេ?</p>
-      <p class="description">នេះជាការចែករំលែកពីបទពិសោធន៍ពិតមួយដែលតែងតែកើតឡើងទៅលើ
-សិស្សសាលាមួយចំនួន យើងសង្ឈឹមថាវាអាចជួយក្រែងរំឭកដល់យើងទាំង
-អស់ចូលរួមបំបាត់ការបៀតបៀនគ្រប់ទំរង់ទាំងអស់។ </p>
-    </div>   
+    {% for article in articles %}    
+
+    <div class="card ">
+
+      {% with 'img/'|add:article.image as image_static %}
+        <img src="{% static image_static %}" alt=""/>        
+      {% endwith %}
+
+      <span class="author"> {{ article.author }} </span>
+      <span class="date"> {{ article.created_at }} </span>
+      <span class="time"> {{ article.created_at|timesince }} </span>
+
+      <span class="en"> 
+
+        <h3 class="title"> {{ article.title_en | safe }}</h3>
+        <p class="description"> {{ article.description_en | safe }} </p>
+        <a href="/post/{{ article.pk }}/en/"> READ MORE </a>
+
+      </span>
+
+      <span class="kh"> 
+
+        <h3 class="title"> {{ article.title_kh | safe }}</h3>
+        <p class="description"> {{ article.description_kh | safe }} </p>
+        <a href="/post/{{ article.pk }}/kh/"> READ MORE </a>
+
+      </span>
 
 
-    <div class="card">
-      <img src="{% static 'img/article-image-2.png' %}" alt=""></img>
-      <span class="author"> Chhorn Sopheara | ឆន សុភារ៉ា </span>
-      <span class="date"> 28.02.2022 </span>
-      <span class="time"> 1 min ago</span>
-      <p class="title">តើអ្នកធ្លាប់ដូចខ្ញុំដែរឬទេ?</p>
-      <p class="description">នេះជាការចែករំលែកពីបទពិសោធន៍ពិតមួយដែលតែងតែកើតឡើងទៅលើ
-សិស្សសាលាមួយចំនួន យើងសង្ឈឹមថាវាអាចជួយក្រែងរំឭកដល់យើងទាំង
-អស់ចូលរួមបំបាត់ការបៀតបៀនគ្រប់ទំរង់ទាំងអស់។ </p>
-    </div>   
 
+    </div> 
 
-    <div class="card">
-      <img src="{% static 'img/.png' %}" alt=""></img>
-      <span class="author"> Chhorn Sopheara | ឆន សុភារ៉ា </span>
-      <span class="date"> 28.02.2022 </span>
-      <span class="time"> 1 min ago</span>
-      <p class="title">តើអ្នកធ្លាប់ដូចខ្ញុំដែរឬទេ?</p>
-      <p class="description">នេះជាការចែករំលែកពីបទពិសោធន៍ពិតមួយដែលតែងតែកើតឡើងទៅលើ
-សិស្សសាលាមួយចំនួន យើងសង្ឈឹមថាវាអាចជួយក្រែងរំឭកដល់យើងទាំង
-អស់ចូលរួមបំបាត់ការបៀតបៀនគ្រប់ទំរង់ទាំងអស់។ </p>
-    </div>   
-
-
-    <div class="card">
-      <img src="{% static 'img/.png' %}" alt=""></img>
-      <span class="author"> Chhorn Sopheara | ឆន សុភារ៉ា </span>
-      <span class="date"> 28.02.2022 </span>
-      <span class="time"> 1 min ago</span>
-      <p class="title">តើអ្នកធ្លាប់ដូចខ្ញុំដែរឬទេ?</p>
-      <p class="description">នេះជាការចែករំលែកពីបទពិសោធន៍ពិតមួយដែលតែងតែកើតឡើងទៅលើ
-សិស្សសាលាមួយចំនួន យើងសង្ឈឹមថាវាអាចជួយក្រែងរំឭកដល់យើងទាំង
-អស់ចូលរួមបំបាត់ការបៀតបៀនគ្រប់ទំរង់ទាំងអស់។ </p>
-    </div>   
-
-
+    {% endfor %} 
 
   </div>   
 

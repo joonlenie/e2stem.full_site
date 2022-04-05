@@ -31,5 +31,5 @@ RUN chmod +x /start
 
 COPY . /e2stem.site
 
-
+WORKDIR /e2stem.site/app
 

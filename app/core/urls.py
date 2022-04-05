@@ -27,9 +27,9 @@ urlpatterns = [
     
     path('<str:language>/', TemplateView.as_view(template_name='home.html'), name="home"),    
     path('about/<str:language>/', TemplateView.as_view(template_name='about.html'), name="about"),        
-    path('blog/<str:language>/', views.blog, name="blog"),         
+    #path('blog/<str:language>/', views.blog, name="blog"),         
     path('survey/<str:language>/', views.survey, name="survey"),         
     path('menstruation/<str:language>/', TemplateView.as_view(template_name='menstruation.html'), name="menstruation"),        
-    path('sharing/<str:language>/', TemplateView.as_view(template_name='sharing.html'), name="sharing"),        
-    
+    path('sharing/<str:language>/', views.sharing, name="sharing"),        
+    path('post/<str:post_id>/<str:language>/', views.post, name="post"),            
 ]

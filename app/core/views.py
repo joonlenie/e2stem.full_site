@@ -1,12 +1,16 @@
-from django.shortcuts import render
-
-from database.models import Student                
-
 import os
         
 import markdown
 from markdown.extensions import attr_list
-      
+from datetime import datetime
+
+from django.shortcuts import render
+from django.utils import timezone
+
+from database.models import Student, BlogPost                
+
+     
+"""
   
 def blog(request, language):
 
@@ -40,10 +44,48 @@ def blog(request, language):
 
     }
 
-    print(language)
-
     return render(request, 'blog.html', context)
 
+"""
+  
+def sharing(request, language):
+
+    articles = BlogPost.objects.all()
+
+    for article in articles:
+
+        article.text_en = markdown.markdown(article.text_en, extensions=['attr_list'])
+        article.text_kh = markdown.markdown(article.text_kh, extensions=['attr_list'])
+
+        article.description_en = article.text_kh.split("\n")[0]
+        article.description_en = article.text_kh.split("\n")[0]
+
+        #article.since_created = (datetime.now()- article.created_at).total_seconds()
+
+            
+    context = {
+
+        'articles': articles
+
+    }
+
+    return render(request, 'sharing.html', context)
+
+
+def post(request, post_id, language):
+
+    article = BlogPost.objects.filter(pk=post_id)[0]
+
+    article.text_en = markdown.markdown(article.text_en, extensions=['attr_list'])
+    article.text_kh = markdown.markdown(article.text_kh, extensions=['attr_list'])
+
+    context = {
+
+        'article': article
+
+    }
+
+    return render(request, 'blog_post.html', context)
         
 def survey(request, language):
 

@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %} test  {% endblock %}
+{% block description %} ... {% endblock %}
+
+{% block css %}
+    
+  <link href="{% static 'css/post.css' %}" rel="stylesheet">
+    
+{% endblock %} 
+
+{% block js %} {% endblock %}
+
+{% block main %}          
+ 
+<section id="article">  
+
+  {% with 'img/'|add:article.image as image_static %}
+    <img src="{% static image_static %}" alt=""/>        
+  {% endwith %}
+
+  <span class="author"> {{ article.author }} </span>
+  <span class="date"> {{ article.created_at }} </span>
+  <span class="time"> {{ article.created_at|timesince }} </span>
+
+  <span class="en"> 
+
+    <h3 class="title"> {{ article.title_en | safe }}</h3>
+    <p class="description"> {{ article.text_en | safe }} </p>
+
+  </span>
+
+  <span class="kh"> 
+
+    <h3 class="title"> {{ article.title_kh | safe }}</h3>
+    <p class="text"> {{ article.text_kh | safe }} </p>
+
+  </span>
+
+</section>     
+
+{% endblock %}
+
+

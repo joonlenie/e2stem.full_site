@@ -33,36 +33,38 @@
 
     {% for article in articles %}    
 
-    <div class="card ">
+    <div class="card">
 
       {% with 'img/'|add:article.image as image_static %}
         <img src="{% static image_static %}" alt=""/>        
       {% endwith %}
 
-      <span class="author"> {{ article.author }} </span>
-      <span class="date"> {{ article.created_at }} </span>
-      <span class="time"> {{ article.created_at|timesince }} </span>
+      <div class="information">
 
-      <span class="en"> 
+        <span class="author">{{ article.author }}</span>
+        <span class="date">{{ article.created_at }}</span>
+        <span class="time">{{ article.created_at|timesince }}</span>
 
-        <h3 class="title"> {{ article.title_en | safe }}</h3>
-        <p class="description"> {{ article.description_en | safe }} </p>
-        <a href="/post/{{ article.pk }}/en/"> READ MORE </a>
+        <span class="en"> 
 
-      </span>
+          <h3 class="title">{{ article.title_en | safe }}</h3>
+          <p class="description">{{ article.description_en | safe }}</p>
+          <a href="/post/{{ article.id }}/en/"> READ MORE </a>
 
-      <span class="kh"> 
+        </span>
 
-        <h3 class="title"> {{ article.title_kh | safe }}</h3>
-        <p class="description"> {{ article.description_kh | safe }} </p>
-        <a href="/post/{{ article.pk }}/kh/"> READ MORE </a>
+        <span class="kh"> 
 
-      </span>
+          <h3 class="title">{{ article.title_kh | safe }}</h3>
+          <p class="description">{{ article.description_kh | safe }}</p>
+          <a href="/post/{{ article.id }}/kh/">READ MORE</a>
 
+        </span>
 
+      </div> 
 
-    </div> 
-
+    </div>
+ 
     {% endfor %} 
 
   </div>   

@@ -21,7 +21,8 @@ body {
   height: 100%;
   margin: 0rem;
   background-color: var(--lightorange);  
-
+  max-width:100rem;
+  margin: 0 auto;
 }
 
 main {

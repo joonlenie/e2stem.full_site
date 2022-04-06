@@ -24,12 +24,23 @@ from core import views
 urlpatterns = [
 
     path('admin/', admin.site.urls),
-    
-    path('<str:language>/', TemplateView.as_view(template_name='home.html'), name="home"),    
+
+    path('about/', TemplateView.as_view(template_name='about.html'), name="about"),        
     path('about/<str:language>/', TemplateView.as_view(template_name='about.html'), name="about"),        
-    #path('blog/<str:language>/', views.blog, name="blog"),         
-    path('survey/<str:language>/', views.survey, name="survey"),         
+
+    path('survey/', views.survey, name="survey"),         
+    path('survey/<str:language>/', views.survey, name="survey"),  
+
+    path('menstruation/', TemplateView.as_view(template_name='menstruation.html'), name="menstruation"),               
     path('menstruation/<str:language>/', TemplateView.as_view(template_name='menstruation.html'), name="menstruation"),        
-    path('sharing/<str:language>/', views.sharing, name="sharing"),        
-    path('post/<str:post_id>/<str:language>/', views.post, name="post"),            
+ 
+    path('sharing/', views.sharing, name="sharing"),        
+    path('sharing/<str:language>/', views.sharing, name="sharing"),  
+      
+    path('post/<str:post_id>/', views.post, name="post"),  
+    path('post/<str:post_id>/<str:language>/', views.post, name="post"),  
+    
+    path('', TemplateView.as_view(template_name='home.html'), name="home"),        
+    path('<str:language>/', TemplateView.as_view(template_name='home.html'), name="home"),            
+
 ]

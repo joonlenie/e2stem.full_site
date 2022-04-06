@@ -22,6 +22,8 @@
 
     <script src="{% static 'js/set-language.js' %}"></script>    
 
+    <script>let language = '{{ language }}'; </script>
+
     {% block css %} {% endblock %}
     {% block js %} {% endblock %}
       
@@ -59,7 +61,6 @@
         <span class="en">
 
           <a href="/en/">Home</a>
-          <!-- <a href="/new-articles/en/">New Articles</a> -->  
           <a href="/menstruation/en/">Menstruation</a>  
           <a href="/sharing/en/">Sharing</a> 
           <a href="/survey/en/">Survey</a>         
@@ -70,7 +71,6 @@
         <span class="kh">
 
           <a href="/kh/">ទំព័រដើម</a>
-          <!-- <a href="/new-articles/kh/">អត្ថបទថ្មីៗ</a>  --> 
           <a href="/menstruation/kh/">មេរៀនវដ្ដរដូវ</a>  
           <a href="/sharing/kh/">អត្ថបទចែករំលែក</a> 
           <a href="/survey/kh/">ការស្ទង់មតិ</a>         

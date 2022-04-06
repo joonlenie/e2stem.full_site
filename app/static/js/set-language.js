@@ -27,9 +27,13 @@ function setLanguage(userLanguage) {
 
 document.addEventListener('DOMContentLoaded', function() {
 
- let language = window.location.pathname.replace(/\/$/, '').split("/").pop()
+  if (!language) {
 
- setLanguage(language)
+    language = 'en'
+
+  }
+
+  setLanguage(language)
     
 });
 

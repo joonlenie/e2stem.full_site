@@ -1,7 +1,0 @@
-## Khmer Language
-
-Khmer is an Austroasiatic language spoken by the Khmer people, and the official and national language of Cambodia. Khmer has been influenced considerably by Sanskrit and Pali, especially in the royal and religious registers, through Hinduism and Buddhism. It is also the earliest recorded and earliest written language of the Mon–Khmer family, predating Mon and Vietnamese,[4] due to Old Khmer being the language of the historical empires of Chenla, Angkor and, presumably, their earlier predecessor state, Funan.
-
-The vast majority of Khmer speakers speak Central Khmer, the dialect of the central plain where the Khmer are most heavily concentrated. Within Cambodia, regional accents exist in remote areas but these are regarded as varieties of Central Khmer. Two exceptions are the speech of the capital, Phnom Penh, and that of the Khmer Khe in Stung Treng province, both of which differ sufficiently enough from Central Khmer to be considered separate dialects of Khmer.
-
-Outside of Cambodia, three distinct dialects are spoken by ethnic Khmers native to areas that were historically part of the Khmer Empire. The Northern Khmer dialect is spoken by over a million Khmers in the southern regions of Northeast Thailand and is treated by some linguists as a separate language. Khmer Krom, or Southern Khmer, is the first language of the Khmer of Vietnam, while the Khmer living in the remote Cardamom Mountains speak a very conservative dialect that still displays features of the Middle Khmer language. 

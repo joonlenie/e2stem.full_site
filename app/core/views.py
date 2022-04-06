@@ -10,45 +10,9 @@ from django.utils import timezone
 from database.models import Student, BlogPost                
 
      
-"""
+
   
-def blog(request, language):
-
-    markdown_dir = 'blog'
-
-    articles = []
-
-    for directory in os.listdir(markdown_dir):
-
-        en_markdown_path = "{}/{}/en.md".format(markdown_dir, directory)
-        kh_markdown_path = "{}/{}/kh.md".format(markdown_dir, directory)
-
-        en_markdown = open(en_markdown_path, 'r').read()
-        kh_markdown = open(kh_markdown_path, 'r').read()
-
-        en_html = markdown.markdown(en_markdown, extensions=['attr_list'])
-        kh_html = markdown.markdown(kh_markdown, extensions=['attr_list'])
-
-        article = {
-
-          'en': en_html,
-          'kh': kh_html
-
-        }
-
-        articles.append(article)
-                    
-    context = {
-
-        'articles': articles
-
-    }
-
-    return render(request, 'blog.html', context)
-
-"""
-  
-def sharing(request, language):
+def sharing(request, language='en'):
 
     articles = BlogPost.objects.all()
 
@@ -65,14 +29,14 @@ def sharing(request, language):
             
     context = {
 
-        'articles': articles
-
+        'articles': articles,
+        'language': language
     }
 
     return render(request, 'sharing.html', context)
 
 
-def post(request, post_id, language):
+def post(request, post_id, language='en'):
 
     article = BlogPost.objects.filter(pk=post_id)[0]
 
@@ -81,13 +45,15 @@ def post(request, post_id, language):
 
     context = {
 
-        'article': article
+        'article': article,
+        'language': language
 
     }
 
-    return render(request, 'blog_post.html', context)
+    return render(request, 'post.html', context)
+
         
-def survey(request, language):
+def survey(request, language='en'):
 
     if request.method == 'GET':
     
@@ -97,7 +63,8 @@ def survey(request, language):
         
         context = {
         
-          'student_count': student_count
+          'student_count': student_count,
+          'language': language
           
         }
 
@@ -115,7 +82,6 @@ def survey(request, language):
                 
         question_one = request.POST.get('q-1')     
         question_two = request.POST.get('q-2')       
-        print(question_one)
         
         responses = [question_one, question_two]
         responses_str = "\n\n".join(responses)

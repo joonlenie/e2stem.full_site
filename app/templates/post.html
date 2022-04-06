@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %} test  {% endblock %}
+{% block description %} ... {% endblock %}
+
+{% block css %}
+    
+  <link href="{% static 'css/post.css' %}" rel="stylesheet">
+    
+{% endblock %} 
+
+{% block js %} {% endblock %}
+
+{% block main %}          
+ 
+<section id="article">  
+
+  <article>
+
+    <h3 class="title en">{{ article.title_en | safe }}</h3>
+    <p class="description en">{{ article.text_en | safe }}</p>
+
+    <h3 class="title kh">{{ article.title_kh | safe }}</h3>
+    <p class="text kh">{{ article.text_kh | safe }}</p>
+ 
+    <span class="author">{{ article.author }}</span>
+    <span class="date">{{ article.created_at }}</span>
+    <span class="time">{{ article.created_at|timesince }}</span>
+
+  </article>
+
+</section>     
+
+{% endblock %}
+
+

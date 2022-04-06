@@ -1,4 +1,32 @@
-#article img {
-  max-width:40rem;
-  display:block;
+body {
+
+  background-color: var(--lightpurple);
+
 }
+
+article {
+
+  background-color: var(--white);
+  max-width: 60rem;
+  margin: 0 auto;
+  padding: 2rem;
+
+}
+
+article img {
+
+  display:block;
+
+}
+
+article p {
+
+
+}
+
+article .information {
+
+
+}
+
+

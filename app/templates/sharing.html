@@ -19,7 +19,7 @@
   <img id="sharing-board" src="{% static 'img/sharing-board.png' %}" alt="Textual Graphic"></img>
 
   <!--
-  <video id="sharing-board" src="{% static 'img/sharing-board.png' %}" alt="Textual Graphic"></video>
+  <video id="sharing-board" src="{% static 'video/sharing-board.mpeg' %}" alt="Textual Graphic"></video>
   -->
 
 </section>   
@@ -43,21 +43,21 @@
 
         <span class="author">{{ article.author }}</span>
         <span class="date">{{ article.created_at }}</span>
-        <span class="time">{{ article.created_at|timesince }}</span>
+        <span class="time">{{ article.since_created }} days ago</span>
 
         <span class="en"> 
 
           <h3 class="title">{{ article.title_en | safe }}</h3>
-          <p class="description">{{ article.description_en | safe }}</p>
-          <a href="/post/{{ article.id }}/en/"> READ MORE </a>
+          <p class="subtitle">{{ article.subtitle_en | safe }}</p>
+          <a class="read-more-link" href="/post/{{ article.id }}/en/"> READ MORE </a>
 
         </span>
 
         <span class="kh"> 
 
           <h3 class="title">{{ article.title_kh | safe }}</h3>
-          <p class="description">{{ article.description_kh | safe }}</p>
-          <a href="/post/{{ article.id }}/kh/">READ MORE</a>
+          <p class="subtitle">{{ article.subtitle_kh | safe }}</p>
+          <a class="read-more-link" href="/post/{{ article.id }}/kh/"> READ MORE </a>
 
         </span>
 

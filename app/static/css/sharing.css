@@ -28,7 +28,7 @@ body {
   text-align:center;
   font-size:36px;
 
-  /*! margin-bottom: 100px; */
+  margin: 30px 0px 30px 0px;
 }
 
 .card {
@@ -36,8 +36,12 @@ body {
   /*! display:inline-block; */
   /*! margin:3%; */
   background-color: var(--lightorange); 
-  /*! padding:30px; */
+  /*! padding-bottom:30px; */
   border: 2px solid var(--black);
+}
+
+.card .information {
+  padding:15px 15px 90px 15px;
 }
 
 .card .title {
@@ -53,17 +57,26 @@ body {
 
 
 .card .author {
-
+  margin-right: 15px;
 }
 
 .card .date {
-
+  margin-right: 15px;
 }
 
 .card .time {
+  margin-right: 15px;
+}
+
+.card .subtitle {
 
 }
 
-.card .description {
-
+.read-more-link {
+  background: black;
+  padding: 15px;
+  position: absolute;
+  bottom: 15px;
+  margin: 0 auto;
 }
+

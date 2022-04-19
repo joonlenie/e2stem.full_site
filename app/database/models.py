@@ -28,8 +28,11 @@ class Student(models.Model):
 
 class BlogPost(models.Model):
 
-    title_en = models.CharField(max_length=500)
-    title_kh = models.CharField(max_length=500)
+    title_en = models.CharField(max_length=200)
+    title_kh = models.CharField(max_length=200)
+
+    subtitle_en = models.CharField(max_length=500)
+    subtitle_kh = models.CharField(max_length=500)
 
     text_en = models.TextField()  
     text_kh = models.TextField()    

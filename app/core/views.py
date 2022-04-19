@@ -9,9 +9,7 @@ from django.utils import timezone
 
 from database.models import Student, BlogPost                
 
-     
 
-  
 def sharing(request, language='en'):
 
     articles = BlogPost.objects.all()
@@ -21,12 +19,13 @@ def sharing(request, language='en'):
         article.text_en = markdown.markdown(article.text_en, extensions=['attr_list'])
         article.text_kh = markdown.markdown(article.text_kh, extensions=['attr_list'])
 
-        article.description_en = article.text_kh.split("\n")[0]
-        article.description_en = article.text_kh.split("\n")[0]
+        #article.subtitle_en = article.text_en.split("\n")[0]
+        #article.subtitle_kh = article.text_kh.split("\n")[0]
 
-        #article.since_created = (datetime.now()- article.created_at).total_seconds()
+        article.since_created = (datetime.now().date() - article.created_at).days
 
-            
+        article.created_at = article.created_at.strftime("%d-%b-%y")
+
     context = {
 
         'articles': articles,

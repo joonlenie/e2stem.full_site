@@ -62,8 +62,8 @@ def survey(request, language='en'):
 
     if request.method == 'POST':
     
-        print(request.POST)   
-         
+        print(request.POST.dict())   
+        print(dir(request.POST))         
         context = {}
 
         return render(request, 'survey-success.html', context)

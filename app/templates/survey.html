@@ -57,327 +57,359 @@
       <h2>សូមអរគុណសម្រាប់ការចំណាយពេលរបស់អ្នក នឹងការចូលរួមរបស់អ្នកនៅក្នុងការបំពេញ survey មួយនេះ!</h2>
       
     </section>
-    
-
-            
+           
     <section id="survey">
     
-  
       <form id="survey-form" action="/survey/" method="post">
   
       {% csrf_token %} 
-
-      
+  
         <ul>
         
           <li class="instruction">
-            <span>* Required</span>
-            <h4>ព័ត៌មាន​ផ្ទាល់ខ្លួន</h4>
-            <p>ពួកយើងនិងរក្សាការសម្ងាត់នូវព័ត៌មានរបស់អ្នក។</p>
+          
+            <fieldset>
+            
+              <span>* Required</span>
+              <h4>ព័ត៌មាន​ផ្ទាល់ខ្លួន</h4>
+              <p>ពួកយើងនិងរក្សាការសម្ងាត់នូវព័ត៌មានរបស់អ្នក។</p>
+              
+            </fieldset>
+            
           </li>
           
           <li>
-            <h6>1. អាយុ *</h6>
-            <input type="text" class=""/>
+            <fieldset>
+              <h6>1. អាយុ *</h6>
+              <input type="text" class=""/>
+            </fieldset>
           </li>          
           <li>
-            <h6>2. ភេទ *</h6>
-            <label>
-              <input type="radio" value="ស្រី"/>
-              <span>ស្រី</span>
-            </label>
-            <label>
-              <input type="radio" value="ប្រុស"/>
-              <span>ប្រុស</span>
-            </label>
-            <label>
-              <input type="radio" value="LGBTQI"/>
-              <span>LGBTQI</span>
-            </label>
-            <label>
-              <input type="radio" value="សុំមិននិយាយ"/>
-              <span>សុំមិននិយាយ</span>
-            </label>
+            <fieldset>
+              <h6>2. ភេទ *</h6>
+              <label>
+                <input type="radio" name="radio-1" id="" value="ស្រី"/>
+                <span>ស្រី</span>
+              </label>
+              <label>
+                <input type="radio" name="radio-1" id="" value="ប្រុស"/>
+                <span>ប្រុស</span>
+              </label>  
+              <label>
+                <input type="radio" name="radio-1" id="" value="LGBTQI" />
+                <span>LGBTQI</span>
+              </label>
+              <label>
+                <input type="radio" name="radio-1" id="" value="សុំមិននិយាយ" />
+                <span>សុំមិននិយាយ</span>
+              </label>
+            </fieldset>
           </li>
           <li>
-            <h6>3. កម្រិតថ្នាក់ *</h6>
-            <label>
-              <input type="radio" value="១០"/>
-              <span>១០</span>
-            </label>
-            <label>
-              <input type="radio" value="១១"/>
-              <span>១១</span>
-            </label>
-            <label>
-              <input type="radio" value="១២"/>
-              <span>១២</span>
-            </label>
+            <fieldset>
+              <h6>3. កម្រិតថ្នាក់ *</h6>
+              <label>
+                <input type="radio" name="radio-2" id="" value="១០" />
+                <span>១០</span>
+              </label>
+              <label>
+                <input type="radio" name="radio-2" id="" value="១១"/>
+                <span>១១</span>
+              </label>
+              <label>
+                <input type="radio" name="radio-2" id="" value="១២"/>
+                <span>១២</span>
+              </label>
+            </fieldset>
           </li>
           <li>
-            <h6>4. សាលា *</h6>
-            <label>
-              <input type="radio" value="E2stem"/>
-              <span>E2stem</span>
-            </label>
-            <label>
-              <input type="radio" value="other"/>
-              <span>មកពីសាលាផ្សេងក្រៅពីសាលាE2stem</span>
-            </label>
+            <fieldset>
+              <h6>4. សាលា *</h6>
+              <label>
+                <input type="radio" name="radio-3" id="" value="E2stem"/>
+                <span>E2stem</span>
+              </label>
+              <label>
+                <input type="radio" name="radio-3" id="" value="other"/>
+                <span>មកពីសាលាផ្សេងក្រៅពីសាលាE2stem</span>
+              </label>
+            </fieldset>
           </li>
 
           <li class="instruction">
-            <h6>ផ្នែក១ សំនួរទាក់ទងនិងបទពិសោធន៍របស់អ្នកជាមួយនិងការទិញផលិតផលស្រ្តីសម្រាប់ពេលមករដូវ     </h6>
-            <p>សូមអានសំនួរខាងក្រោម ហើយឆ្លើយទៅតាម បទពិសោធន៍។   </p>      
+            <fieldset>
+              <h6>ផ្នែក១ សំនួរទាក់ទងនិងបទពិសោធន៍របស់អ្នកជាមួយនិងការទិញផលិតផលស្រ្តីសម្រាប់ពេលមករដូវ     </h6>
+              <p>សូមអានសំនួរខាងក្រោម ហើយឆ្លើយទៅតាម បទពិសោធន៍។   </p>      
+            </fieldset>
           </li>
                     
           <li>
-            <h6>១. តើអ្នកស្គាល់ផលិតផលស្រ្តីសម្រាប់ប្រើប្រាស់ពេលមករដូវណាខ្លះខាងក្រោមនេះ? *</h6>
-            <label>
-              <input type="checkbox" value="សំឡីអនាម័យ"/>
-              <span>សំឡីអនាម័យ</span>
-            </label>
-            <label>
-              <input type="checkbox" value="កំណាត់ស្រ្តី"/>
-              <span>កំណាត់ស្រ្តី</span>
-            </label>
-            <label>
-              <input type="checkbox" value="ពែងរដូវ menstrual cup"/>
-              <span>ពែងរដូវ menstrual cup</span>
-            </label>
-            <label>
-              <input type="checkbox" value="ផ្សេងៗ"/>
-              <span>ផ្សេងៗ</span>
-            </label>
+            <fieldset>
+              <h6>១. តើអ្នកស្គាល់ផលិតផលស្រ្តីសម្រាប់ប្រើប្រាស់ពេលមករដូវណាខ្លះខាងក្រោមនេះ? *</h6>
+              <label>
+                <input type="checkbox" value="សំឡីអនាម័យ"/>
+                <span>សំឡីអនាម័យ</span>
+              </label>
+              <label>
+                <input type="checkbox" value="កំណាត់ស្រ្តី"/>
+                <span>កំណាត់ស្រ្តី</span>
+              </label>
+              <label>
+                <input type="checkbox" value="ពែងរដូវ menstrual cup"/>
+                <span>ពែងរដូវ menstrual cup</span>
+              </label>
+              <label>
+                <input type="checkbox" value="ផ្សេងៗ"/>
+                <span>ផ្សេងៗ</span>
+              </label>
+            </fieldset>
           </li>
           <li>
-            <h6>២. តើអ្នកដែលធ្លាប់ទិញផលិតផលស្រ្តីសម្រាប់ប្រើប្រាស់ពេលមករដូវដែរឬទេ ? *</h6>
-            <label>
-              <input type="radio" value="ធ្លាប់"/>
-              <span>ធ្លាប់</span>
-            </label>
-            <label>
-              <input type="radio" value="មិនធ្លាប់ទេ"/>
-              <span>មិនធ្លាប់ទេ</span>
-            </label>
+            <fieldset>
+              <h6>២. តើអ្នកដែលធ្លាប់ទិញផលិតផលស្រ្តីសម្រាប់ប្រើប្រាស់ពេលមករដូវដែរឬទេ ? *</h6>
+              <label>
+                <input type="radio" name="radio-4" id="" value="ធ្លាប់"/>
+                <span>ធ្លាប់</span>
+              </label>
+              <label>
+                <input type="radio" name="radio-4" id="" value="មិនធ្លាប់ទេ"/>
+                <span>មិនធ្លាប់ទេ</span>
+              </label>
+            </fieldset>
           </li>
           <li>
-            <h6>២.១. ប្រសិនបើអ្នកធ្លាប់ទិញ តើអ្នកទិញប្រើប្រាស់ផ្ទាល់ខ្លួនឬ ទិញឱ្យអ្នកដទៃ?</h6>
-            <label>
-              <input type="radio" value="ទិញប្រើប្រាស់ផ្ទាល់ខ្លួន"/>
-              <span>ទិញប្រើប្រាស់ផ្ទាល់ខ្លួន</span>
-            </label>
-            <label>
-              <input type="radio" value="ទិញសម្រាប់អ្នកដទៃ"/>
-              <span>ទិញសម្រាប់អ្នកដទៃ</span>
-            </label>
+            <fieldset>
+              <h6>២.១. ប្រសិនបើអ្នកធ្លាប់ទិញ តើអ្នកទិញប្រើប្រាស់ផ្ទាល់ខ្លួនឬ ទិញឱ្យអ្នកដទៃ?</h6>
+              <label>
+                <input type="radio" name="radio-5" id="" value="ទិញប្រើប្រាស់ផ្ទាល់ខ្លួន"/>
+                <span>ទិញប្រើប្រាស់ផ្ទាល់ខ្លួន</span>
+              </label>
+              <label>
+                <input type="radio" name="radio-5" id="" value="ទិញសម្រាប់អ្នកដទៃ"/>
+                <span>ទិញសម្រាប់អ្នកដទៃ</span>
+              </label>
+            </fieldset>
           </li>
           <li>
-            <h6>២.២. ប្រសិនបើអ្នកធ្លាប់ តើអ្នកដែលធ្លាប់ចំណាយពេលអានការណែនាំរបស់ផលិតផលស្រ្តីនីមួយៗឲបានច្បាស់លាស់ដែរឬទេ មុនពេលដែលអ្នកនឹងទិញវា?​</h6>
-            <label>
-              <input type="radio" value="ដែល"/>
-              <span>ដែល</span>
-            </label>
-            <label>
-              <input type="radio" value="មិនដែលទេ"/>
-              <span>មិនដែលទេ</span>
-            </label>
+            <fieldset>
+              <h6>២.២. ប្រសិនបើអ្នកធ្លាប់ តើអ្នកដែលធ្លាប់ចំណាយពេលអានការណែនាំរបស់ផលិតផលស្រ្តីនីមួយៗឲបានច្បាស់លាស់ដែរឬទេ មុនពេលដែលអ្នកនឹងទិញវា?​</h6>
+              <label>
+                <input type="radio" name="radio-6" id="" value="ដែល"/>
+                <span>ដែល</span>
+              </label>
+              <label>
+                <input type="radio" name="radio-6" id="" value="មិនដែលទេ"/>
+                <span>មិនដែលទេ</span>
+              </label>
+            </fieldset>
           </li>
           <li>
-            <h6>២.៣ ប្រសិនបើអ្នកមិនធ្លាប់ទិញ តើមកពីមូលហេតុអ្វី?</h6>
-            <label>
-              <input type="radio" value="មិនត្រូវការប្រើប្រាស់"/>
-              <span>មិនត្រូវការប្រើប្រាស់</span>
-            </label>
-            <label>
-              <input type="radio" value="មានអ្នកទិញឱ្យ"/>
-              <span>មានអ្នកទិញឱ្យ</span>
-            </label>
-            <label>
-              <input type="radio" value="ផ្សេងៗ"/>
-              <span>ផ្សេងៗ</span>
-            </label>
+            <fieldset>
+              <h6>២.៣ ប្រសិនបើអ្នកមិនធ្លាប់ទិញ តើមកពីមូលហេតុអ្វី?</h6>
+              <label>
+                <input type="radio" name="radio-7" id="" value="មិនត្រូវការប្រើប្រាស់"/>
+                <span>មិនត្រូវការប្រើប្រាស់</span>
+              </label>
+              <label>
+                <input type="radio" name="radio-7" id="" value="មានអ្នកទិញឱ្យ"/>
+                <span>មានអ្នកទិញឱ្យ</span>
+              </label>
+              <label>
+                <input type="radio" name="radio-7" id="" value="ផ្សេងៗ"/>
+                <span>ផ្សេងៗ</span>
+              </label>
+              </fieldset>
+            </li>
+            <li>
+              <fieldset>
+              <h6>៣. តើអ្នកធ្លាប់ត្រូវបានគេសើចចំអកដែរឬទេនៅពេលអ្នកទៅទិញផលិតផលស្រ្តីទាំងនោះ? *</h6>
+              <label>
+                <input type="radio" name="radio-8" id="" value="ធ្លាប់"/>
+                <span>ធ្លាប់</span>
+              </label>
+              <label>
+                <input type="radio" name="radio-8" id="" value="មិនធ្លាប់ទេ"/>
+                <span>មិនធ្លាប់ទេ</span>
+              </label>
+            </fieldset>
           </li>
           <li>
-            <h6>៣. តើអ្នកធ្លាប់ត្រូវបានគេសើចចំអកដែរឬទេនៅពេលអ្នកទៅទិញផលិតផលស្រ្តីទាំងនោះ? *</h6>
-            <label>
-              <input type="radio" value="ធ្លាប់"/>
-              <span>ធ្លាប់</span>
-            </label>
-            <label>
-              <input type="radio" value="មិនធ្លាប់ទេ"/>
-              <span>មិនធ្លាប់ទេ</span>
-            </label>
+            <fieldset>
+              <h6>៤. ពី ០ ដល់ ១០ តើអ្នកអាចវាស់វែងបានទេពីអារម្មណ៍អៀនខ្មាស ឬ មិនមានផាសុខភាពប៉ុន្មានក្នុងការទិញផលិតផលស្រ្តី? (​ ០ មិនមានអារម្មណ៍អៀនខ្មាស, ១ តិចបំផុត, ១០ ខ្លាំងបំផុត ) *</h6>
+              <label>
+                <input type="radio" name="radio-9" id="" value="1"/>
+                <span>1</span>
+              </label>
+              <label>
+                <input type="radio" name="radio-9" id="" value="2"/>
+                  <span>2</span>  
+              </label>
+              <label>
+                <input type="radio" name="radio-9" id="" value="3"/>
+                <span>3</span>
+              </label>
+              <label>
+                <input type="radio" name="radio-9" id="" value="4"/>
+                <span>4</span>
+              </label>
+              <label>
+                <input type="radio" name="radio-9" id="" value="5"/>
+                <span>5</span>
+              </label>
+              <label>
+                <input type="radio" name="radio-9" id="" value="6"/>
+                <span>6</span>
+              </label>
+              <label>
+                <input type="radio" name="radio-9" id="" value="7"/>
+                <span>7</span>
+              </label>
+              <label>
+                <input type="radio" name="radio-9" id="" value="8"/>
+                <span>8</span>
+              </label>
+              <label>
+                <input type="radio" name="radio-9" id="" value="9"/>
+                <span>9</span>
+              </label>
+              <label>
+                <input type="radio" name="radio-9" id="" value="10"/>
+                <span>10</span>
+              </label>
+            </fieldset>
           </li>
-          <li>
-            <h6>៤. ពី ០ ដល់ ១០ តើអ្នកអាចវាស់វែងបានទេពីអារម្មណ៍អៀនខ្មាស ឬ មិនមានផាសុខភាពប៉ុន្មានក្នុងការទិញផលិតផលស្រ្តី? (​ ០ មិនមានអារម្មណ៍អៀនខ្មាស, ១ តិចបំផុត, ១០ ខ្លាំងបំផុត ) *</h6>
-            <label>
-              <input type="radio" value="1"/>
-              <span>1</span>
-            </label>
-            <label>
-              <input type="radio" value="2"/>
-              <span>2</span>
-            </label>
-            <label>
-              <input type="radio" value="3"/>
-              <span>3</span>
-            </label>
-            <label>
-              <input type="radio" value="4"/>
-              <span>4</span>
-            </label>
-            <label>
-              <input type="radio" value="5"/>
-              <span>5</span>
-            </label>
-            <label>
-              <input type="radio" value="6"/>
-              <span>6</span>
-            </label>
-            <label>
-              <input type="radio" value="7"/>
-              <span>7</span>
-            </label>
-            <label>
-              <input type="radio" value="8"/>
-              <span>8</span>
-            </label>
-            <label>
-              <input type="radio" value="9"/>
-              <span>9</span>
-            </label>
-            <label>
-              <input type="radio" value="10"/>
-              <span>10</span>
-            </label>
-          </li>
-                
-          
+   
           <li class="instruction">
-            <h6>ផ្នែក២ សម្រាប់អ្នកធ្លាប់មករដូវប៉ុណ្ណាះ</h6>
-            <p>សូមអានសំនួរខាងក្រោម ហើយឆ្លើយទៅតាម បទពិសោធន៍ </p>      
+            <fieldset>          
+              <h6>ផ្នែក២ សម្រាប់អ្នកធ្លាប់មករដូវប៉ុណ្ណាះ</h6>
+              <p>សូមអានសំនួរខាងក្រោម ហើយឆ្លើយទៅតាម បទពិសោធន៍ </p>      
+            </fieldset>
           </li>
-          
-
-
-                           
+                      
           <li>
-            <h6>១. តើអ្នកចាប់ផ្ដើមមានរដូវនៅអាយុប្រហែលប៉ុន្មាន?</h6>
-            <input type="text" class=""/>
-          </li>
-          <li>
-            <h6>២. តើអ្នកដឹងពីវដ្តរដូវតាមរយៈរបៀបណា ឬពីនរណា?</h6>
-            <label>
-              <input type="checkbox" value="តាមរយៈការបង្រៀនពីលោកគ្រូអ្នកគ្រូ"/>
-              <span>តាមរយៈការបង្រៀនពីលោកគ្រូអ្នកគ្រូ</span>
-            </label>
-            <label>
-              <input type="checkbox" value="តាម Internet"/>
-              <span>តាម Internet</span>
-            </label>
-            <label>
-              <input type="checkbox" value="តាមគ្រួសារ"/>
-              <span>តាមគ្រួសារ</span>
-            </label>
-            <label>
-              <input type="checkbox" value="មិត្តភក្តិ"/>
-              <span>មិត្តភក្តិ</span>
-            </label>
-            <label>
-              <input type="checkbox" value="បទពិសោធន៍ផ្ទាល់ខ្លួន"/>
-              <span>បទពិសោធន៍ផ្ទាល់ខ្លួន</span>
-            </label>
-            <label>
-              <input type="checkbox" value="ផ្សេងៗ"/>
-              <span>ផ្សេងៗ</span>
-            </label>
+            <fieldset>
+              <h6>១. តើអ្នកចាប់ផ្ដើមមានរដូវនៅអាយុប្រហែលប៉ុន្មាន?</h6>
+              <input type="text" class=""/>
+            </fieldset>
           </li>
           <li>
-            <h6>ពី ០ ដល់ ១០ តើអ្នកយល់ពីវដ្តរដូវកម្រិតណាដែរ? (០ មិនយល់ទាល់តែសោះ, ១ យល់តិចបំផុត, ១០ យល់ច្រើនខ្លាំង)</h6>
+            <fieldset>
+              <h6>២. តើអ្នកដឹងពីវដ្តរដូវតាមរយៈរបៀបណា ឬពីនរណា?</h6>
+              <label>
+                <input type="checkbox" value="តាមរយៈការបង្រៀនពីលោកគ្រូអ្នកគ្រូ"/>
+                <span>តាមរយៈការបង្រៀនពីលោកគ្រូអ្នកគ្រូ</span>
+              </label>
+              <label>
+                <input type="checkbox" value="តាម Internet"/>
+                <span>តាម Internet</span>
+              </label>
+              <label>
+                <input type="checkbox" value="តាមគ្រួសារ"/>
+                <span>តាមគ្រួសារ</span>
+              </label>
+              <label>
+                <input type="checkbox" value="មិត្តភក្តិ"/>
+                <span>មិត្តភក្តិ</span>
+              </label>
+              <label>
+                <input type="checkbox" value="បទពិសោធន៍ផ្ទាល់ខ្លួន"/>
+                <span>បទពិសោធន៍ផ្ទាល់ខ្លួន</span>
+              </label>
+              <label>
+                <input type="checkbox" value="ផ្សេងៗ"/>
+                <span>ផ្សេងៗ</span>
+              </label>
+            </fieldset>
+          </li>
+          <li>
+            <fieldset>
+              <h6>ពី ០ ដល់ ១០ តើអ្នកយល់ពីវដ្តរដូវកម្រិតណាដែរ? (០ មិនយល់ទាល់តែសោះ, ១ យល់តិចបំផុត, ១០ យល់ច្រើនខ្លាំង)</h6>
+              <label>
+                <input type="radio" name="radio-10" id="" value="1"/>
+                <span>1</span>
+              </label>
             <label>
-              <input type="radio" value="1"/>
-              <span>1</span>
-            </label>
-            <label>
-              <input type="radio" value="2"/>
+              <input type="radio" name="radio-10" id="" value="2"/>
               <span>2</span>
             </label>
             <label>
-              <input type="radio" value="3"/>
+              <input type="radio" name="radio-10" id="" value="3"/>
               <span>3</span>
             </label>
             <label>
-              <input type="radio" value="4"/>
+              <input type="radio" name="radio-10" id="" value="4"/>
               <span>4</span>
             </label>
             <label>
-              <input type="radio" value="5"/>
+              <input type="radio" name="radio-10" id="" value="5"/>
               <span>5</span>
             </label>
             <label>
-              <input type="radio" value="6"/>
+              <input type="radio" name="radio-10" id="" value="6"/>
               <span>6</span>
             </label>
             <label>
-              <input type="radio" value="7"/>
+              <input type="radio" name="radio-10" id="" value="7"/>
               <span>7</span>
             </label>
             <label>
-              <input type="radio" value="8"/>
+              <input type="radio" name="radio-10" id="" value="8"/>
               <span>8</span>
             </label>
             <label>
-              <input type="radio" value="9"/>
+              <input type="radio" name="radio-10" id="" value="9"/>
               <span>9</span>
             </label>
             <label>
-              <input type="radio" value="10"/>
+              <input type="radio" name="radio-10" id="" value="10">
               <span>10</span>
             </label>
+            </fieldset>
           </li>
           <li>
-            <h6>ពី0ដល់១០ តើអ្នកមានផាសុខភាពឬមានអារម្មណ៍ថាមានសុវត្ថិភាពប៉ុណ្ណានៅពេលដែលត្រូវការផ្លាស់ប្ដូរផលិតផលស្រ្តីនៅ កន្លែងសាធារណៈ? (០ មិនមានផាសុខភាព, ១ មានផាសុខភាពតិច, ១០ មានផាសុខភាពខ្លាំង)</h6>
-            <label>
-              <input type="radio" value="1"/>
-              <span>1</span>
-            </label>
-            <label>
-              <input type="radio" value="2"/>
-              <span>2</span>
-            </label>
-            <label>
-              <input type="radio" value="3"/>
-              <span>3</span>
-            </label>
-            <label>
-              <input type="radio" value="4"/>
-              <span>4</span>
-            </label>
-            <label>
-              <input type="radio" value="5"/>
-              <span>5</span>
-            </label>
-            <label>
-              <input type="radio" value="6"/>
-              <span>6</span>
-            </label>
-            <label>
-              <input type="radio" value="7"/>
-              <span>7</span>
-            </label>
-            <label>
-              <input type="radio" value="8"/>
-              <span>8</span>
-            </label>
-            <label>
-              <input type="radio" value="9"/>
-              <span>9</span>
-            </label>
-            <label>
-              <input type="radio" value="10"/>
-              <span>10</span>
-            </label>
+            <fieldset>
+              <h6>ពី0ដល់១០ តើអ្នកមានផាសុខភាពឬមានអារម្មណ៍ថាមានសុវត្ថិភាពប៉ុណ្ណានៅពេលដែលត្រូវការផ្លាស់ប្ដូរផលិតផលស្រ្តីនៅ កន្លែងសាធារណៈ? (០ មិនមានផាសុខភាព, ១ មានផាសុខភាពតិច, ១០ មានផាសុខភាពខ្លាំង)</h6>
+              <label>
+                <input type="radio" name="radio-11" id="" value="1"/>
+                <span>1</span>
+              </label>
+              <label>
+                <input type="radio" name="radio-11" id="" value="2"/>
+                  <span>2</span>  
+              </label>
+              <label>
+                <input type="radio" name="radio-11" id="" value="3"/>
+                <span>3</span>
+              </label>
+              <label>
+                <input type="radio" name="radio-11" id="" value="4"/>
+                <span>4</span>
+              </label>
+              <label>
+                <input type="radio" name="radio-11" id="" value="5"/>
+                <span>5</span>
+              </label>
+              <label>
+                <input type="radio" name="radio-11" id="" value="6"/>
+                <span>6</span>
+              </label>
+              <label>
+                <input type="radio" name="radio-11" id="" value="7"/>
+                <span>7</span>
+              </label>
+              <label>
+                <input type="radio" name="radio-11" id="" value="8"/>
+                <span>8</span>
+              </label>
+              <label>
+                <input type="radio" name="radio-11" id="" value="9"/>
+                <span>9</span>
+              </label>
+              <label>
+                <input type="radio" name="radio-11" id="" value="10"/>
+                <span>10</span>
+              </label>
+            </fieldset>
           </li>
         </ul>
         

@@ -56,26 +56,16 @@ def survey(request, language='en'):
 
     if request.method == 'GET':
     
-        students = Student.objects.all()
-        
-        student_count = len(students)
-        
-        context = {
-        
-          'student_count': student_count,
-          'language': language
-          
-        }
+        context = {}
 
         return render(request, 'survey.html', context)
 
-  
     if request.method == 'POST':
     
         print(request.POST)   
          
         context = {}
 
-        return render(request, 'survey.html', context)
+        return render(request, 'survey-success.html', context)
 
         

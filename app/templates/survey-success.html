@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %} success | e2stem.site {% endblock %}
+{% block description %} The survey has been submitted successfully{% endblock %}
+
+{% block css %}
+    
+  <link href="{% static 'css/success.css' %}" rel="stylesheet">
+    
+{% endblock %}
+
+{% block js %} {% endblock %}
+
+{% block main %}          
+ 
+<section id="success">     
+    
+  <h1 style="padding: 4rem; text-align: center;"> Your survey has been submitted successfully! </h1>
+  
+</section>     
+
+{% endblock %}
+
+

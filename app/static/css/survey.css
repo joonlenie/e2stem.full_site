@@ -23,9 +23,14 @@ h1, h2 {
 #contributors,
 #notice {
 
-  background: #cccccc;
+  background: white;
   padding: 1rem;
-  margin: 1rem 0rem 1rem 0rem;
+  
+}
+
+#survey {
+
+  padding-bottom: 8rem;
   
 }
 
@@ -85,6 +90,8 @@ a {
   border: 2px solid yellowgreen;
   border-radius: 0px;
   height: 4rem;
+  width: 14rem;
+  background-color: white;
   
 }
 

@@ -4,6 +4,30 @@ nav a:nth-child(3) {
 
 }
 
+section {
+
+  padding: 0rem;
+  max-width: 80rem;
+}
+
+
+h1, h2 {
+
+  margin: 1rem 0rem 3rem 0rem;
+  
+}
+
+
+#welcome,
+#about,
+#contributors,
+#notice {
+
+  background: #cccccc;
+  padding: 1rem;
+  margin: 1rem 0rem 1rem 0rem;
+  
+}
 
 
 h2 {
@@ -17,50 +41,58 @@ h2 {
 form {
 
   min-width: 40rem;
+  max-width: 60rem;  
+  padding: 0rem;  
+}
+
+
+ul {
+
+  padding: 0rem;
   
 }
 
-fieldset {
-
-  border: none;
-  padding: 0rem 0rem 2rem 0rem;
-  
-}
-
-fieldset > label {
-
-  display: block;
-
-}
-
-fieldset > select {
-
-  display: inline-block;
-  margin: 2rem 0rem 0rem 0rem;
+li {
   padding: 1rem;
-  border: 2px solid #f9a5b3;  
-  border-radius: 0px;  
-  appearance: none;
+  margin: 1rem 0rem 1rem 0rem;
+  list-style-type: none;  
+  background: white;
+
+
+}
+
+.instruction {
+
+  color: red;
   
 }
 
-fieldset > input {
-
-  display: inline-block;
-  padding: 1rem 0.25rem 1rem 0.25rem ;
+label {
+  padding: 1rem;
 }
 
-fieldset > textarea {
 
-  width: 100%;
-  height: 10rem;  
+a {
+  color: #7c53dc;
+}
+
+/* Style classes */
+
+.green-button  {
+
+  margin: 1rem 0rem 1rem 0rem;
+  padding: 1rem;
+  border: 2px solid yellowgreen;
+  border-radius: 0px;
+  height: 4rem;
   
 }
 
-#submit-button {
+.green-button:hover {
 
-
-  width: 15rem;
-
-  
+  background-color: yellowgreen;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+    
 }

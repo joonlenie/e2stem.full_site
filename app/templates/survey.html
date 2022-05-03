@@ -12,54 +12,380 @@
 
 {% block js %} {% endblock %}
 
-{% block main %}          
+{% block main %}         
 
-  <section id="survey">  
+    <section id="welcome">
+    
+      <h1>ផាសុខភាពក្នុងការទិញផលិតផលស្រ្តីសម្រាប់ពេលមករដូវ</h1>
+      <p>ជាកិច្ចដំបូងយើងខ្ញុំសូមធ្វើការស្វាគមន៍អ្នកទាំងអស់គ្នាដែលបានចូលមកកាន់ការបំពេញ surveys មួយនេះជាទីគោរព ស្រលាញ់រាប់អាន។</p>
+      <p>នាងខ្ញុំឈ្មោះ តារា សិរីរតនូ និង គី សុដារីយ៉ា ជាសិស្សនៃសាលា E2stem Education Cambodia ក្រោមគំរោងសហការជាមួយ Green Lady Cambodia បានបង្កើតទម្រង់នេះឡើងក្នុងគោលបំណង ចង់ស្វែងយល់ពីអាកប្បកិរិយាឬ ការប្រតិកម្មរបស់អ្នកទាំងអស់គ្នាទៅលើរឿងការទិញផលិតផលស្រ្តីសម្រាប់ពេលមករដូវ។ ពួកយើងសង្ឃឹមថា អ្នកទាំងអស់គ្នានឹងចូលរួមបំពេញSurveyនេះដោយផ្អែកលើភាពពិតជាក់ស្ដែង។</p>
 
-    <h1>Survey</h1>
+    </section>
+    
+    <section id="about">
+    
+      <h2>ប្រសិនអ្នកមានសំនួរ ឬបញ្ហាទាក់ទងនិងកម្រងសំនួរ អាចទាក់ទងមកពួកយើងតាមព័ត៌មានទំនាក់ទំនង</h2>
+      
+      <div>
+        <div>Green Lady Cambodia</div>
+        <div>team@greenladycambodia.com</div>
+      </div>
+      
+    </section>
+    
+    <section id="contributors">
+    
+      <div>
+        <span>Monika Nuon (Project coordinator)</span>
+        <a href="mailto:monikannuon@gmail.com">monikannuon@gmail.com</a>
+        <a href="tel:+85587977739">+855 87977739</a>
+      </div>
+      
+      <div>
+        <span>គី សុដារីយ៉ា (Project team-content team)</span>
+        <a href="mailto:Kisodariya123@gmail.com">Kisodariya123@gmail.com</a>
+        <a href="tel:+855978598936">+855 978598936</a>
+      </div>
+      
+      <div>
+        <span>តារា សិរីរតនូ (Project team-content team)</span>
+        <a href="mailto:monikannuon@gmail.com">dararothanou@gmail.com</a>
+        <a href="tel:+855963052323">+855 963052323</a>
+        <a href="tel:+85517430093">+855 17430093</a>
+      </div>
+      
+      <h2>សូមអរគុណសម្រាប់ការចំណាយពេលរបស់អ្នក នឹងការចូលរួមរបស់អ្នកនៅក្នុងការបំពេញ survey មួយនេះ!</h2>
+      
+    </section>
+    
+    <section id="notice">
+      <span>* Required</span>
+      <h4>ព័ត៌មាន​ផ្ទាល់ខ្លួន</h4>
+      <p>ពួកយើងនិងរក្សាការសម្ងាត់នូវព័ត៌មានរបស់អ្នក។</p>
+    </section>
   
-    <form id="survey-form" action="/survey/" method="post">
+            
+    <section id="survey">
+    
+  
+      <form id="survey-form" action="/survey/" method="post">
   
       {% csrf_token %} 
 
-      <fieldset>
+      
+        <ul>
+          <li>
+            <h6>1. អាយុ *</h6>
+            <input type="text" class=""/>
+          </li>
+          <li>
+            <h6>2. ភេទ *</h6>
+            <label>
+              <input type="radio" value="ស្រី"/>
+              <span>ស្រី</span>
+            </label>
+            <label>
+              <input type="radio" value="ប្រុស"/>
+              <span>ប្រុស</span>
+            </label>
+            <label>
+              <input type="radio" value="LGBTQI"/>
+              <span>LGBTQI</span>
+            </label>
+            <label>
+              <input type="radio" value="សុំមិននិយាយ"/>
+              <span>សុំមិននិយាយ</span>
+            </label>
+          </li>
+          <li>
+            <h6>3. កម្រិតថ្នាក់ *</h6>
+            <label>
+              <input type="radio" value="១០"/>
+              <span>១០</span>
+            </label>
+            <label>
+              <input type="radio" value="១១"/>
+              <span>១១</span>
+            </label>
+            <label>
+              <input type="radio" value="១២"/>
+              <span>១២</span>
+            </label>
+          </li>
+          <li>
+            <h6>4. សាលា *</h6>
+            <label>
+              <input type="radio" value="E2stem"/>
+              <span>E2stem</span>
+            </label>
+            <label>
+              <input type="radio" value="other"/>
+              <span>មកពីសាលាផ្សេងក្រៅពីសាលាE2stem</span>
+            </label>
+          </li>
 
-        <h3>Student Information:</h3>
-      
-        <input type="text" name="name" placeholder="name">
-      
-        <input type="number" name="grade" placeholder="grade">
-        <input type="number" name="age" placeholder="age">
+          <li class="instruction">
+            <h6>ផ្នែក១ សំនួរទាក់ទងនិងបទពិសោធន៍របស់អ្នកជាមួយនិងការទិញផលិតផលស្រ្តីសម្រាប់ពេលមករដូវ     </h6>
+            <p>សូមអានសំនួរខាងក្រោម ហើយឆ្លើយទៅតាម បទពិសោធន៍។   </p>      
+          </li>
+                    
+          <li>
+            <h6>១. តើអ្នកស្គាល់ផលិតផលស្រ្តីសម្រាប់ប្រើប្រាស់ពេលមករដូវណាខ្លះខាងក្រោមនេះ? *</h6>
+            <label>
+              <input type="checkbox" value="សំឡីអនាម័យ"/>
+              <span>សំឡីអនាម័យ</span>
+            </label>
+            <label>
+              <input type="checkbox" value="កំណាត់ស្រ្តី"/>
+              <span>កំណាត់ស្រ្តី</span>
+            </label>
+            <label>
+              <input type="checkbox" value="ពែងរដូវ menstrual cup"/>
+              <span>ពែងរដូវ menstrual cup</span>
+            </label>
+            <label>
+              <input type="checkbox" value="ផ្សេងៗ"/>
+              <span>ផ្សេងៗ</span>
+            </label>
+          </li>
+          <li>
+            <h6>២. តើអ្នកដែលធ្លាប់ទិញផលិតផលស្រ្តីសម្រាប់ប្រើប្រាស់ពេលមករដូវដែរឬទេ ? *</h6>
+            <label>
+              <input type="radio" value="ធ្លាប់"/>
+              <span>ធ្លាប់</span>
+            </label>
+            <label>
+              <input type="radio" value="មិនធ្លាប់ទេ"/>
+              <span>មិនធ្លាប់ទេ</span>
+            </label>
+          </li>
+          <li>
+            <h6>២.១. ប្រសិនបើអ្នកធ្លាប់ទិញ តើអ្នកទិញប្រើប្រាស់ផ្ទាល់ខ្លួនឬ ទិញឱ្យអ្នកដទៃ?</h6>
+            <label>
+              <input type="radio" value="ទិញប្រើប្រាស់ផ្ទាល់ខ្លួន"/>
+              <span>ទិញប្រើប្រាស់ផ្ទាល់ខ្លួន</span>
+            </label>
+            <label>
+              <input type="radio" value="ទិញសម្រាប់អ្នកដទៃ"/>
+              <span>ទិញសម្រាប់អ្នកដទៃ</span>
+            </label>
+          </li>
+          <li>
+            <h6>២.២. ប្រសិនបើអ្នកធ្លាប់ តើអ្នកដែលធ្លាប់ចំណាយពេលអានការណែនាំរបស់ផលិតផលស្រ្តីនីមួយៗឲបានច្បាស់លាស់ដែរឬទេ មុនពេលដែលអ្នកនឹងទិញវា?​</h6>
+            <label>
+              <input type="radio" value="ដែល"/>
+              <span>ដែល</span>
+            </label>
+            <label>
+              <input type="radio" value="មិនដែលទេ"/>
+              <span>មិនដែលទេ</span>
+            </label>
+          </li>
+          <li>
+            <h6>២.៣ ប្រសិនបើអ្នកមិនធ្លាប់ទិញ តើមកពីមូលហេតុអ្វី?</h6>
+            <label>
+              <input type="radio" value="មិនត្រូវការប្រើប្រាស់"/>
+              <span>មិនត្រូវការប្រើប្រាស់</span>
+            </label>
+            <label>
+              <input type="radio" value="មានអ្នកទិញឱ្យ"/>
+              <span>មានអ្នកទិញឱ្យ</span>
+            </label>
+            <label>
+              <input type="radio" value="ផ្សេងៗ"/>
+              <span>ផ្សេងៗ</span>
+            </label>
+          </li>
+          <li>
+            <h6>៣. តើអ្នកធ្លាប់ត្រូវបានគេសើចចំអកដែរឬទេនៅពេលអ្នកទៅទិញផលិតផលស្រ្តីទាំងនោះ? *</h6>
+            <label>
+              <input type="radio" value="ធ្លាប់"/>
+              <span>ធ្លាប់</span>
+            </label>
+            <label>
+              <input type="radio" value="មិនធ្លាប់ទេ"/>
+              <span>មិនធ្លាប់ទេ</span>
+            </label>
+          </li>
+          <li>
+            <h6>៤. ពី ០ ដល់ ១០ តើអ្នកអាចវាស់វែងបានទេពីអារម្មណ៍អៀនខ្មាស ឬ មិនមានផាសុខភាពប៉ុន្មានក្នុងការទិញផលិតផលស្រ្តី? (​ ០ មិនមានអារម្មណ៍អៀនខ្មាស, ១ តិចបំផុត, ១០ ខ្លាំងបំផុត ) *</h6>
+            <label>
+              <input type="radio" value="1"/>
+              <span>1</span>
+            </label>
+            <label>
+              <input type="radio" value="2"/>
+              <span>2</span>
+            </label>
+            <label>
+              <input type="radio" value="3"/>
+              <span>3</span>
+            </label>
+            <label>
+              <input type="radio" value="4"/>
+              <span>4</span>
+            </label>
+            <label>
+              <input type="radio" value="5"/>
+              <span>5</span>
+            </label>
+            <label>
+              <input type="radio" value="6"/>
+              <span>6</span>
+            </label>
+            <label>
+              <input type="radio" value="7"/>
+              <span>7</span>
+            </label>
+            <label>
+              <input type="radio" value="8"/>
+              <span>8</span>
+            </label>
+            <label>
+              <input type="radio" value="9"/>
+              <span>9</span>
+            </label>
+            <label>
+              <input type="radio" value="10"/>
+              <span>10</span>
+            </label>
+          </li>
+                
+          
+          <li class="instruction">
+            <h6>ផ្នែក២ សម្រាប់អ្នកធ្លាប់មករដូវប៉ុណ្ណាះ</h6>
+            <p>សូមអានសំនួរខាងក្រោម ហើយឆ្លើយទៅតាម បទពិសោធន៍ </p>      
+          </li>
+          
 
-        <br>
-      
-        <select id="teacher-select" name="teacher">
+
+                           
+          <li>
+            <h6>១. តើអ្នកចាប់ផ្ដើមមានរដូវនៅអាយុប្រហែលប៉ុន្មាន?</h6>
+            <input type="text" class=""/>
+          </li>
+          <li>
+            <h6>២. តើអ្នកដឹងពីវដ្តរដូវតាមរយៈរបៀបណា ឬពីនរណា?</h6>
+            <label>
+              <input type="checkbox" value="តាមរយៈការបង្រៀនពីលោកគ្រូអ្នកគ្រូ"/>
+              <span>តាមរយៈការបង្រៀនពីលោកគ្រូអ្នកគ្រូ</span>
+            </label>
+            <label>
+              <input type="checkbox" value="តាម Internet"/>
+              <span>តាម Internet</span>
+            </label>
+            <label>
+              <input type="checkbox" value="តាមគ្រួសារ"/>
+              <span>តាមគ្រួសារ</span>
+            </label>
+            <label>
+              <input type="checkbox" value="មិត្តភក្តិ"/>
+              <span>មិត្តភក្តិ</span>
+            </label>
+            <label>
+              <input type="checkbox" value="បទពិសោធន៍ផ្ទាល់ខ្លួន"/>
+              <span>បទពិសោធន៍ផ្ទាល់ខ្លួន</span>
+            </label>
+            <label>
+              <input type="checkbox" value="ផ្សេងៗ"/>
+              <span>ផ្សេងៗ</span>
+            </label>
+          </li>
+          <li>
+            <h6>ពី ០ ដល់ ១០ តើអ្នកយល់ពីវដ្តរដូវកម្រិតណាដែរ? (០ មិនយល់ទាល់តែសោះ, ១ យល់តិចបំផុត, ១០ យល់ច្រើនខ្លាំង)</h6>
+            <label>
+              <input type="radio" value="1"/>
+              <span>1</span>
+            </label>
+            <label>
+              <input type="radio" value="2"/>
+              <span>2</span>
+            </label>
+            <label>
+              <input type="radio" value="3"/>
+              <span>3</span>
+            </label>
+            <label>
+              <input type="radio" value="4"/>
+              <span>4</span>
+            </label>
+            <label>
+              <input type="radio" value="5"/>
+              <span>5</span>
+            </label>
+            <label>
+              <input type="radio" value="6"/>
+              <span>6</span>
+            </label>
+            <label>
+              <input type="radio" value="7"/>
+              <span>7</span>
+            </label>
+            <label>
+              <input type="radio" value="8"/>
+              <span>8</span>
+            </label>
+            <label>
+              <input type="radio" value="9"/>
+              <span>9</span>
+            </label>
+            <label>
+              <input type="radio" value="10"/>
+              <span>10</span>
+            </label>
+          </li>
+          <li>
+            <h6>ពី0ដល់១០ តើអ្នកមានផាសុខភាពឬមានអារម្មណ៍ថាមានសុវត្ថិភាពប៉ុណ្ណានៅពេលដែលត្រូវការផ្លាស់ប្ដូរផលិតផលស្រ្តីនៅ កន្លែងសាធារណៈ? (០ មិនមានផាសុខភាព, ១ មានផាសុខភាពតិច, ១០ មានផាសុខភាពខ្លាំង)</h6>
+            <label>
+              <input type="radio" value="1"/>
+              <span>1</span>
+            </label>
+            <label>
+              <input type="radio" value="2"/>
+              <span>2</span>
+            </label>
+            <label>
+              <input type="radio" value="3"/>
+              <span>3</span>
+            </label>
+            <label>
+              <input type="radio" value="4"/>
+              <span>4</span>
+            </label>
+            <label>
+              <input type="radio" value="5"/>
+              <span>5</span>
+            </label>
+            <label>
+              <input type="radio" value="6"/>
+              <span>6</span>
+            </label>
+            <label>
+              <input type="radio" value="7"/>
+              <span>7</span>
+            </label>
+            <label>
+              <input type="radio" value="8"/>
+              <span>8</span>
+            </label>
+            <label>
+              <input type="radio" value="9"/>
+              <span>9</span>
+            </label>
+            <label>
+              <input type="radio" value="10"/>
+              <span>10</span>
+            </label>
+          </li>
+        </ul>
         
-          <option value="" style="color: #999;" disabled selected>Select Teacher</option>
-          <option value="A">Mr. A</option>
-          <option value="B">Mrs. B</option>
-
-        </select>
-      
-      </fieldset>
-
-      <fieldset>
-
-        <h3>Questions:</h3>
+        <input class="green-button" id="submit-button" type="submit" value="SUBMIT">   
            
-        <label for="q-1">What is your favorite subject and why?</label>
-        <textarea name="q-1" placeholder="..."></textarea>
-
-        <label for="q-2">How long have you studied this subject?</label> 
-        <textarea name="q-2" placeholder="..."></textarea>    
+      </form>
       
-      </fieldset>
 
-      <input class="green-button" id="submit-button" type="submit" value="SUBMIT">
-
-    </form>   
-
-  </section>    
+      
+    </section> 
 
 {% endblock %}
 

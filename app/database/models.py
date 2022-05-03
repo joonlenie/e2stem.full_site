@@ -7,10 +7,7 @@ from django.db import models
 class Student(models.Model):
 
     name = models.CharField(max_length=100)
-    age = models.IntegerField(null=False)
-    grade = models.IntegerField(null=False)    
-    teacher = models.CharField(max_length=100) 
-        
+            
     responses = models.TextField(null=False)  
     
     created_at = models.DateField(default=datetime.now)
@@ -23,6 +20,50 @@ class Student(models.Model):
     class Meta:
 
        ordering = ['created_at']
+       
+"""
+       
+# Question model
+
+class Question(models.Model):
+
+    question_type = models.CharField(max_length=100)
+
+    question = models.TextField(null=False)  
+    options = models.TextField(null=False)     
+     
+    created_at = models.DateField(default=datetime.now)
+    last_modified = models.DateField(auto_now=True)
+    
+    def __str__(self):
+
+        return self.question
+
+    class Meta:
+
+       ordering = ['created_at']
+       
+       
+# Answer model
+
+class Answer(models.Model):
+
+    student = models.ForeignKey(Student)
+    question = models.ForeignKey(Question)
+    answer = models.TextField(null=False)     
+    
+    created_at = models.DateField(default=datetime.now)
+    last_modified = models.DateField(auto_now=True)
+    
+    def __str__(self):
+
+        return self.name
+
+    class Meta:
+
+       ordering = ['created_at']
+       
+"""                     
 
 # Blog model
 

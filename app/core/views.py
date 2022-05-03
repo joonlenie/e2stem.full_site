@@ -72,31 +72,8 @@ def survey(request, language='en'):
   
     if request.method == 'POST':
     
-        # print(request.POST)   
+        print(request.POST)   
          
-        name = request.POST.get('name')
-        age = request.POST.get('age')
-        grade = request.POST.get('grade')
-        teacher = request.POST.get('teacher')        
-                
-        question_one = request.POST.get('q-1')     
-        question_two = request.POST.get('q-2')       
-        
-        responses = [question_one, question_two]
-        responses_str = "\n\n".join(responses)
-                                            
-        student = Student(
-        
-          name=name, 
-          age=int(age),
-          grade=int(grade), 
-          teacher=teacher, 
-          responses=responses_str   
-               
-        )
-        
-        student.save()
-        
         context = {}
 
         return render(request, 'survey.html', context)
